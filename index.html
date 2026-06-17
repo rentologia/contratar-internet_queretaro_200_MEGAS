@@ -170,7 +170,7 @@
             padding: 0 6px;
         }
 
-        /* ===== BANNER DEL COMERCIAL (IMAGEN RECORTADA) ===== */
+        /* ===== BANNER DEL COMERCIAL (CON MODAL) ===== */
         .commercial-banner {
             background: #f0f5ff;
             padding: 10px 20px;
@@ -181,6 +181,7 @@
             justify-content: center;
             gap: 12px;
             flex-wrap: wrap;
+            cursor: pointer;
         }
 
         .commercial-banner img {
@@ -189,6 +190,11 @@
             border-radius: 8px;
             object-fit: cover;
             border: 2px solid #b8d4f0;
+            transition: transform 0.2s;
+        }
+
+        .commercial-banner img:hover {
+            transform: scale(1.05);
         }
 
         .commercial-banner span {
@@ -445,7 +451,7 @@
             color: #64748b;
         }
 
-        /* ===== HBO BONUS (SOLO LOGO) ===== */
+        /* ===== HBO BONUS CON LOGO (RECTANGULAR Y CON MODAL) ===== */
         .hbo-bonus {
             background: linear-gradient(145deg, #0a0a0a, #1a1a2e);
             border-radius: 20px;
@@ -471,7 +477,8 @@
         }
 
         .hbo-bonus .hbo-logo {
-            max-width: 120px;
+            max-width: 220px;
+            width: 100%;
             height: auto;
             margin-bottom: 12px;
             background: white;
@@ -479,6 +486,12 @@
             border-radius: 12px;
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
             display: inline-block;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .hbo-bonus .hbo-logo:hover {
+            transform: scale(1.03);
         }
 
         .hbo-bonus .text {
@@ -748,6 +761,71 @@
             font-size: 20px;
         }
 
+        /* ===== MODAL / LIGHTBOX ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            animation: fadeIn 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.8);
+            border: 3px solid rgba(255, 255, 255, 0.15);
+            animation: zoomIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .modal-overlay .close-btn {
+            position: absolute;
+            top: 25px;
+            right: 30px;
+            color: white;
+            font-size: 36px;
+            font-weight: 300;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .modal-overlay .close-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: rotate(90deg);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 420px) {
             .title { 
@@ -774,6 +852,10 @@
 
             .commercial-banner img {
                 max-height: 40px;
+            }
+
+            .hbo-bonus .hbo-logo {
+                max-width: 180px;
             }
         }
 
@@ -810,17 +892,6 @@
                 transition-duration: 0.01ms !important;
             }
         }
-
-        /* ===== DARK MODE LIGHT SUPPORT ===== */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background: #0a0a0a;
-            }
-
-            .landing-container {
-                box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.8);
-            }
-        }
     </style>
 </head>
 <body>
@@ -846,10 +917,10 @@
             </p>
         </section>
 
-        <!-- ===== BANNER DEL COMERCIAL (IMAGEN RECORTADA) ===== -->
-        <div class="commercial-banner">
+        <!-- ===== BANNER DEL COMERCIAL (CON MODAL) ===== -->
+        <div class="commercial-banner" onclick="openModal(this.querySelector('img').src)">
             <img src="https://i.ibb.co/N6TQ0qZW/comercial.jpg" alt="Comercial Megacable" loading="lazy">
-            <span>📺 Como lo ves en TV</span>
+            <span>📺 Como lo viste en TV y en Facebook</span>
         </div>
 
         <!-- ===== CTAs SUPERIORES ===== -->
@@ -896,10 +967,13 @@
                     <span class="amount">$500 <small>MXN/mes</small></span>
                 </div>
 
-                <!-- ===== HBO BONUS CON LOGO OFICIAL ===== -->
+                <!-- ===== HBO BONUS CON LOGO RECTANGULAR Y MODAL ===== -->
                 <div class="hbo-bonus">
                     <img src="https://i.ibb.co/qYc7PYpL/hbo-logo.png" 
-                         alt="HBO MAX Logo" class="hbo-logo" loading="lazy">
+                         alt="HBO MAX Logo" 
+                         class="hbo-logo" 
+                         loading="lazy"
+                         onclick="openModal(this.src)">
 
                     <div class="text">
                         🎁 BONUS: HBO MAX <span class="duration">6 MESES</span>
@@ -985,6 +1059,54 @@
 
         </main>
     </div>
+
+    <!-- ===== MODAL / LIGHTBOX ===== -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <span class="close-btn" onclick="closeModal(event)">✕</span>
+        <img id="modalImage" src="" alt="Imagen ampliada">
+    </div>
+
+    <script>
+        // ===== FUNCIONES DEL MODAL =====
+        function openModal(src) {
+            if (!src) return;
+            const modal = document.getElementById('modalOverlay');
+            const img = document.getElementById('modalImage');
+            img.src = src;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Evita scroll
+        }
+
+        function closeModal(event) {
+            // Si el clic es en el overlay o en la X, cerramos
+            const modal = document.getElementById('modalOverlay');
+            const isOverlay = event.target === modal;
+            const isCloseBtn = event.target.classList.contains('close-btn');
+            
+            if (isOverlay || isCloseBtn) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                // Opcional: limpiar src para ahorrar memoria
+                // document.getElementById('modalImage').src = '';
+            }
+        }
+
+        // Cerrar con tecla ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('modalOverlay');
+                if (modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+
+        // Prevenir que el clic en la imagen cierre el modal
+        document.getElementById('modalImage').addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    </script>
 
 </body>
 </html>
