@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Fibra Óptica + HBO MAX 6 Meses - Querétaro</title>
+    <title>Internet Fibra Óptica + 170 Canales + Amazon Apps - Querétaro</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         /* ===== RESET Y BASE ===== */
@@ -35,7 +35,7 @@
             overflow: hidden;
         }
 
-        /* ===== BARRA DE URGENCIA (Escasez) ===== */
+        /* ===== BARRA DE URGENCIA ===== */
         .urgency-bar {
             background: #ffcc00;
             color: #001f66;
@@ -188,7 +188,7 @@
             background: #f8fafc;
         }
 
-        /* ===== TARJETA TRIPLE PACK (MÁS SOLICITADO) ===== */
+        /* ===== TARJETA TRIPLE PACK ===== */
         .decision-card {
             background: #ffffff;
             border: 2px solid #003d99;
@@ -229,6 +229,32 @@
             font-weight: 900;
             text-align: center;
             margin-top: 10px;
+        }
+
+        /* ===== BADGE DE VENTAJA: 6 MESES (NO COMPROMISO) ===== */
+        .advantage-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #2ed573, #26a65b);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 800;
+            margin: 8px auto 4px auto;
+            box-shadow: 0px 4px 16px rgba(46, 213, 115, 0.35);
+            animation: pulseAdvantage 2.5s infinite;
+        }
+
+        @keyframes pulseAdvantage {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .advantage-badge .icon {
+            font-size: 18px;
         }
 
         /* ===== PRECIO CON ANCLAJE ===== */
@@ -272,7 +298,7 @@
             color: #475569;
         }
 
-        /* ===== BONUS HBO (FELICIDAD) CON DURACIÓN DE 6 MESES ===== */
+        /* ===== BONUS HBO 6 MESES ===== */
         .hbo-bonus {
             background: linear-gradient(145deg, #fce7f3, #fdf2f8);
             border-left: 5px solid #ec4899;
@@ -283,13 +309,6 @@
             gap: 14px;
             margin: 12px 0 16px 0;
             box-shadow: 0px 4px 12px rgba(236, 72, 153, 0.1);
-            animation: pulseHBO 3s infinite;
-        }
-
-        @keyframes pulseHBO {
-            0% { border-left-color: #ec4899; }
-            50% { border-left-color: #ff6bcb; }
-            100% { border-left-color: #ec4899; }
         }
 
         .hbo-bonus .icon {
@@ -326,7 +345,7 @@
             margin: 12px 0;
         }
 
-        /* ===== BENEFICIOS (Neuroventas) ===== */
+        /* ===== BENEFICIOS CLAVE ===== */
         .neuro-benefits {
             list-style: none;
         }
@@ -342,6 +361,14 @@
 
         .neuro-benefits li strong {
             color: #003d99;
+        }
+
+        .neuro-benefits li .highlight-green {
+            background: #d4edda;
+            padding: 0 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            color: #155724;
         }
 
         .neuro-benefits li .highlight-blue {
@@ -387,7 +414,7 @@
             color: #003d99;
         }
 
-        /* ===== DOBLE CTA (WhatsApp + Presencial) ===== */
+        /* ===== DOBLE CTA CON MENSAJES PERSONALIZADOS ===== */
         .cta-container {
             display: flex;
             flex-direction: column;
@@ -477,25 +504,6 @@
             font-size: 16px;
         }
 
-        /* ===== NUEVO: BADGE DE COMPROMISO 6 MESES ===== */
-        .commitment-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #003d99;
-            color: white;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 700;
-            margin: 8px auto 4px auto;
-            box-shadow: 0px 4px 12px rgba(0, 61, 153, 0.3);
-        }
-
-        .commitment-badge .icon {
-            font-size: 16px;
-        }
-
         /* ===== RESPONSIVE ===== */
         @media (max-width: 380px) {
             .title { font-size: 24px; }
@@ -521,8 +529,9 @@
                 Estrenas Casa, <br><span class="highlight">Nosotros te Conectamos</span>
             </h1>
             <p class="subtitle">
-                Fibra óptica de <strong>ultra velocidad</strong> con <strong>HBO MAX 6 meses en PROMO</strong>.<br>
-                Sin papeleo. <strong>Instalación GRATIS</strong> con solo $100.
+                <strong>200 Megas + 170 canales + 4 apps de Amazon</strong><br>
+                con <strong>HBO MAX 6 meses en PROMO</strong>.<br>
+                Instalación GRATIS con solo $100 de adelanto.
             </p>
         </section>
 
@@ -531,12 +540,12 @@
             <div class="pain-box">
                 <div class="emoji-big">😤</div>
                 <div class="label">❌ Antes (Dolor)</div>
-                <div class="desc">Sin internet, sin series, sin trabajo</div>
+                <div class="desc">Sin internet, sin canales, sin entretenimiento</div>
             </div>
             <div class="happy-box">
                 <div class="emoji-big">🥳</div>
                 <div class="label">✅ Ahora (Felicidad)</div>
-                <div class="desc">+200 Megas, HBO MAX 6 meses y estabilidad</div>
+                <div class="desc">200 Megas + 170 canales + Amazon + HBO 6 meses</div>
             </div>
         </div>
 
@@ -548,23 +557,29 @@
                 <span class="pop-badge">🔥 MÁS SOLICITADO</span>
                 <h2>🚀 Triple Pack Conecta Total</h2>
 
-                <!-- BADGE DE COMPROMISO 6 MESES -->
-                <div class="commitment-badge">
-                    <span class="icon">📅</span> Compromiso mínimo de 6 meses
+                <!-- VENTAJA: 6 MESES (NO COMPROMISO) -->
+                <div class="advantage-badge">
+                    <span class="icon">🎯</span> Todos piden 1 año, nosotros solo 6 meses
                 </div>
 
                 <div class="price-tag">
-                    <span class="price-sub">Instalación GRATIS + 1er mes desde</span>
+                    <span class="price-sub">Instalación GRATIS con solo</span>
                     <span class="price-main">$100 <span>MXN</span></span>
-                    <span class="price-note">✅ <small>Bloquea tu precio por 6 meses</small></span>
+                    <span class="price-note">✅ <small>Son un adelanto, se descuentan de tu primer mes</small></span>
                 </div>
 
-                <!-- BONUS HBO CON DURACIÓN DE 6 MESES -->
+                <!-- ===== PRECIO REAL DEL PAQUETE ===== -->
+                <div style="text-align: center; margin: 6px 0 10px 0; background: #f1f5f9; padding: 8px; border-radius: 12px;">
+                    <span style="font-size: 13px; color: #475569;">Paquete completo por solo</span>
+                    <span style="font-size: 22px; font-weight: 900; color: #003d99; display: block;">$500 <span style="font-size: 14px; font-weight: 400; color: #64748b;">MXN/mes</span></span>
+                </div>
+
+                <!-- BONUS HBO 6 MESES -->
                 <div class="hbo-bonus">
                     <div class="icon">🎬</div>
                     <div class="text">
                         🎁 BONUS EXCLUSIVO: HBO MAX <span class="duration">6 MESES EN PROMO</span>
-                        <small>Disfruta de Dune, The Last of Us, Euphoria y más en 4K. <strong>¡Todo el primer semestre!</strong></small>
+                        <small>Disfruta de Dune, The Last of Us, Euphoria y más en 4K.</small>
                     </div>
                 </div>
 
@@ -578,15 +593,19 @@
                     </li>
                     <li>
                         <span class="icon-check">✓</span>
+                        <span><strong><span class="highlight-blue">170 canales</span></strong> — Televisión de paga con los mejores canales en HD.</span>
+                    </li>
+                    <li>
+                        <span class="icon-check">✓</span>
+                        <span><strong><span class="highlight-blue">4 apps de Amazon</span></strong> — Prime Video, Freevee, Amazon Music y más.</span>
+                    </li>
+                    <li>
+                        <span class="icon-check">✓</span>
                         <span><strong>Fibra Óptica Directa</strong> — Señal estable incluso en tormentas. Adiós a los cortes.</span>
                     </li>
                     <li>
                         <span class="icon-check">✓</span>
-                        <span><strong><span class="highlight-blue">6 meses</span> de compromiso</strong> — Tiempo justo para probar la mejor velocidad. Sin multas ocultas.</span>
-                    </li>
-                    <li>
-                        <span class="icon-check">✓</span>
-                        <span><strong>Instalación en 24 horas</strong> — Técnico certificado en tu domicilio.</span>
+                        <span><strong><span class="highlight-green">Solo 6 meses</span></strong> — Mientras todos piden 1 año, nosotros te damos más flexibilidad.</span>
                     </li>
                 </ul>
 
@@ -598,19 +617,22 @@
                 </div>
             </div>
 
-            <!-- ===== DOBLE CTA ===== -->
+            <!-- ===== DOBLE CTA CON MENSAJES PERSONALIZADOS ===== -->
             <div class="cta-container">
-                <!-- CTA 1: WhatsApp -->
-                <a href="https://api.whatsapp.com/send?phone=524464044521&text=Hola,%20quiero%20contratar%20el%20Triple%20Pack%20con%20HBO%20MAX%206%20meses%20en%20Querétaro." 
+
+                <!-- CTA 1: WhatsApp (Contratación digital) -->
+                <a href="https://api.whatsapp.com/send?phone=524464044521&text=Hola,%20quiero%20contratar%20por%20WhatsApp%20el%20Triple%20Pack%20con%20HBO%20MAX%206%20meses%20en%20Querétaro." 
                    class="cta-whatsapp" target="_blank">
                     💬 Contratar por WhatsApp (Más Rápido)
                     <span class="sub-cta">⏱️ Atención en menos de 2 minutos</span>
                 </a>
 
-                <!-- CTA 2: Presencial -->
-                <a href="#" class="cta-presencial" onclick="alert('📞 Llámanos al 442 123 4567 o visítanos en Av. Tecnológico 123, Querétaro.'); return false;">
-                    🏢 Prefiero contratar en persona
+                <!-- CTA 2: Presencial (Visita a domicilio) -->
+                <a href="https://api.whatsapp.com/send?phone=524464044521&text=Hola,%20quiero%20que%20vengan%20a%20mi%20casa%20a%20contratar%20el%20Triple%20Pack%20con%20HBO%20MAX%206%20meses%20en%20Querétaro." 
+                   class="cta-presencial" target="_blank">
+                    🏠 Prefiero que vengan a mi casa
                 </a>
+
             </div>
 
             <!-- ===== FOOTER DE SEGURIDAD ===== -->
