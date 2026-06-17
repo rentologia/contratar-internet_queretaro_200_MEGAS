@@ -1,785 +1,198 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet + 170 Canales + HBO MAX 6 Meses - Querétaro</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        /* ===== RESET Y BASE ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background: #0a1628;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: #333;
-        }
-
-        .landing-container {
-            background: #ffffff;
-            width: 100%;
-            max-width: 480px;
-            min-height: 100vh;
-            box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.6);
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* ===== BARRA DE URGENCIA ===== */
-        .urgency-bar {
-            background: #ffcc00;
-            color: #001f66;
-            text-align: center;
-            padding: 12px 8px;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            animation: pulseUrgency 1.8s infinite;
-            border-bottom: 3px solid #e6b800;
-        }
-
-        @keyframes pulseUrgency {
-            0% { opacity: 0.9; background: #ffcc00; }
-            50% { opacity: 1; background: #ffe066; }
-            100% { opacity: 0.9; background: #ffcc00; }
-        }
-
-        /* ===== HERO (Azul Megacable Premium) ===== */
-        .hero-section {
-            background: linear-gradient(145deg, #003d99 0%, #002266 100%);
-            color: white;
-            padding: 40px 24px 30px 24px;
-            text-align: center;
-            border-bottom-left-radius: 50px;
-            border-bottom-right-radius: 50px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -30%;
-            width: 200px;
-            height: 200px;
-            background: rgba(0, 180, 255, 0.08);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .hero-badge {
-            background: rgba(0, 210, 255, 0.2);
-            color: #66d9ff;
-            padding: 6px 18px;
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: 700;
-            display: inline-block;
-            margin-bottom: 15px;
-            border: 1px solid rgba(0, 210, 255, 0.3);
-            backdrop-filter: blur(5px);
-        }
-
-        .title {
-            font-size: 30px;
-            font-weight: 900;
-            line-height: 1.15;
-            margin-bottom: 12px;
-            letter-spacing: -0.5px;
-        }
-
-        .title .highlight {
-            color: #ffcc00;
-            background: linear-gradient(135deg, #ffcc00, #ff9900);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .subtitle {
-            font-size: 14px;
-            color: #b8d4f0;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-
-        .subtitle strong {
-            color: #ffcc00;
-            font-weight: 700;
-        }
-
-        /* ===== CTAs SUPERIORES (Para acción inmediata) ===== */
-        .cta-top-container {
-            padding: 16px 24px 10px 24px;
-            background: #f0f5ff;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .cta-top-container .label {
-            text-align: center;
-            font-size: 12px;
-            font-weight: 700;
-            color: #003d99;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cta-top-whatsapp {
-            background: linear-gradient(145deg, #25d366, #1da851);
-            color: white;
-            text-decoration: none;
-            padding: 16px 20px;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 16px;
-            text-align: center;
-            display: block;
-            box-shadow: 0px 8px 30px rgba(37, 211, 102, 0.35);
-            transition: all 0.3s ease;
-            animation: pulseWave 2.2s infinite;
-        }
-
-        .cta-top-whatsapp:hover {
-            transform: scale(1.02);
-            background: linear-gradient(145deg, #20b859, #199347);
-        }
-
-        .cta-top-whatsapp .sub {
-            font-size: 11px;
-            font-weight: 400;
-            opacity: 0.85;
-            display: block;
-        }
-
-        .cta-top-presencial {
-            background: #ffffff;
-            color: #003d99;
-            text-decoration: none;
-            padding: 14px 20px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 14px;
-            text-align: center;
-            display: block;
-            border: 2px solid #003d99;
-            transition: all 0.3s ease;
-        }
-
-        .cta-top-presencial:hover {
-            background: #003d99;
-            color: white;
-        }
-
-        @keyframes pulseWave {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-            70% { transform: scale(1.02); box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-
-        /* ===== SECCIÓN DOLOR VS FELICIDAD ===== */
-        .pain-happy-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            padding: 20px 24px 10px 24px;
-            background: #f0f5ff;
-        }
-
-        .pain-box, .happy-box {
-            border-radius: 20px;
-            padding: 16px 12px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            min-height: 140px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .pain-box {
-            background: linear-gradient(145deg, #ff6b6b15, #ff6b6b08);
-            border: 2px solid #ff6b6b30;
-        }
-
-        .happy-box {
-            background: linear-gradient(145deg, #2ed57315, #2ed57308);
-            border: 2px solid #2ed57330;
-        }
-
-        .pain-box img, .happy-box img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 6px;
-            border: 3px solid #e2e8f0;
-        }
-
-        .pain-box .label {
-            font-size: 12px;
-            font-weight: 700;
-            color: #ff6b6b;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .happy-box .label {
-            font-size: 12px;
-            font-weight: 700;
-            color: #2ed573;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .pain-box .desc, .happy-box .desc {
-            font-size: 11px;
-            color: #475569;
-            margin-top: 4px;
-            font-weight: 500;
-        }
-
-        /* ===== CUERPO PRINCIPAL ===== */
-        .main-content {
-            padding: 20px 24px 30px 24px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            background: #f8fafc;
-        }
-
-        /* ===== TARJETA TRIPLE PACK ===== */
-        .decision-card {
-            background: #ffffff;
-            border: 2px solid #003d99;
-            border-radius: 28px;
-            padding: 24px 20px 20px 20px;
-            width: 100%;
-            margin-bottom: 20px;
-            position: relative;
-            box-shadow: 0px 20px 40px rgba(0, 61, 153, 0.12);
-            transition: all 0.3s ease;
-        }
-
-        .decision-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0px 25px 50px rgba(0, 61, 153, 0.18);
-        }
-
-        .pop-badge {
-            background: linear-gradient(135deg, #ff6b35, #ff4500);
-            color: white;
-            font-size: 12px;
-            font-weight: 800;
-            padding: 8px 20px;
-            border-radius: 50px;
-            position: absolute;
-            top: -16px;
-            left: 50%;
-            transform: translateX(-50%);
-            box-shadow: 0px 6px 20px rgba(255, 69, 0, 0.4);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-        }
-
-        .decision-card h2 {
-            font-size: 22px;
-            color: #003d99;
-            font-weight: 900;
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        /* ===== BADGE DE VENTAJA: 6 MESES ===== */
-        .advantage-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(135deg, #2ed573, #26a65b);
-            color: white;
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 800;
-            margin: 8px auto 4px auto;
-            box-shadow: 0px 4px 16px rgba(46, 213, 115, 0.35);
-            animation: pulseAdvantage 2.5s infinite;
-        }
-
-        @keyframes pulseAdvantage {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
-        }
-
-        .advantage-badge .icon {
-            font-size: 18px;
-        }
-
-        /* ===== PRECIO ===== */
-        .price-tag {
-            text-align: center;
-            margin: 15px 0 8px 0;
-            background: linear-gradient(145deg, #e6f0ff, #f0f5ff);
-            padding: 12px 0;
-            border-radius: 16px;
-        }
-
-        .price-sub {
-            font-size: 12px;
-            color: #475569;
-            display: block;
-            font-weight: 600;
-        }
-
-        .price-main {
-            color: #003d99;
-            font-size: 38px;
-            font-weight: 900;
-        }
-
-        .price-main span {
-            font-size: 16px;
-            color: #64748b;
-            font-weight: 400;
-        }
-
-        .price-note {
-            font-size: 13px;
-            color: #2ed573;
-            font-weight: 700;
-            display: block;
-            margin-top: 2px;
-        }
-
-        .price-note small {
-            font-weight: 400;
-            color: #475569;
-        }
-
-        .price-real {
-            text-align: center;
-            margin: 6px 0 10px 0;
-            background: #f1f5f9;
-            padding: 8px;
-            border-radius: 12px;
-        }
-
-        .price-real .label {
-            font-size: 13px;
-            color: #475569;
-        }
-
-        .price-real .amount {
-            font-size: 22px;
-            font-weight: 900;
-            color: #003d99;
-            display: block;
-        }
-
-        .price-real .amount small {
-            font-size: 14px;
-            font-weight: 400;
-            color: #64748b;
-        }
-
-        /* ===== HBO BONUS CON LOGO Y SERIES ===== */
-        .hbo-bonus {
-            background: linear-gradient(145deg, #0a0a0a, #1a1a2e);
-            border-radius: 16px;
-            padding: 16px;
-            margin: 12px 0 16px 0;
-            text-align: center;
-            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        .hbo-bonus .hbo-logo {
-            max-width: 80px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .hbo-bonus .series-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            margin-top: 10px;
-        }
-
-        .hbo-bonus .series-grid img {
-            width: 100%;
-            border-radius: 8px;
-            aspect-ratio: 2/3;
-            object-fit: cover;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .hbo-bonus .series-grid img:hover {
-            transform: scale(1.05);
-        }
-
-        .hbo-bonus .text {
-            color: white;
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        .hbo-bonus .text .duration {
-            display: inline-block;
-            background: #ec4899;
-            color: white;
-            padding: 2px 14px;
-            border-radius: 50px;
-            font-size: 11px;
-            margin-left: 6px;
-        }
-
-        .hbo-bonus .text small {
-            font-weight: 400;
-            color: #94a3b8;
-            display: block;
-            font-size: 12px;
-            margin-top: 4px;
-        }
-
-        .divider {
-            height: 1px;
-            background: #e2e8f0;
-            margin: 12px 0;
-        }
-
-        /* ===== BENEFICIOS ===== */
-        .neuro-benefits {
-            list-style: none;
-        }
-
-        .neuro-benefits li {
-            font-size: 13.5px;
-            margin-bottom: 12px;
-            color: #334155;
-            display: flex;
-            align-items: flex-start;
-            line-height: 1.4;
-        }
-
-        .neuro-benefits li strong {
-            color: #003d99;
-        }
-
-        .neuro-benefits li .highlight-green {
-            background: #d4edda;
-            padding: 0 8px;
-            border-radius: 4px;
-            font-weight: 700;
-            color: #155724;
-        }
-
-        .neuro-benefits li .highlight-blue {
-            background: #e6f0ff;
-            padding: 0 8px;
-            border-radius: 4px;
-            font-weight: 700;
-            color: #003d99;
-        }
-
-        .icon-check {
-            color: #2ed573;
-            font-weight: 900;
-            margin-right: 12px;
-            font-size: 18px;
-            margin-top: -2px;
-        }
-
-        /* ===== PRUEBA SOCIAL ===== */
-        .testimonial-mini {
-            background: linear-gradient(145deg, #e6f0ff, #f0f5ff);
-            padding: 12px 16px;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 13px;
-            color: #334155;
-            margin: 12px 0 18px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            border: 1px solid #b8d4f0;
-            flex-wrap: wrap;
-        }
-
-        .testimonial-mini .stars {
-            color: #ffcc00;
-            font-weight: 700;
-        }
-
-        .testimonial-mini .name {
-            font-weight: 700;
-            color: #003d99;
-        }
-
-        /* ===== CTAs INFERIORES (Refuerzo) ===== */
-        .cta-bottom-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 6px;
-        }
-
-        .cta-bottom-whatsapp {
-            background: linear-gradient(145deg, #25d366, #1da851);
-            color: white;
-            text-decoration: none;
-            padding: 18px 20px;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 16px;
-            text-align: center;
-            display: block;
-            box-shadow: 0px 8px 30px rgba(37, 211, 102, 0.35);
-            transition: all 0.3s ease;
-            animation: pulseWave 2.2s infinite;
-        }
-
-        .cta-bottom-whatsapp:hover {
-            transform: scale(1.02);
-            background: linear-gradient(145deg, #20b859, #199347);
-        }
-
-        .cta-bottom-whatsapp .sub {
-            font-size: 11px;
-            font-weight: 400;
-            opacity: 0.85;
-            display: block;
-        }
-
-        .cta-bottom-presencial {
-            background: #ffffff;
-            color: #003d99;
-            text-decoration: none;
-            padding: 14px 20px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 14px;
-            text-align: center;
-            display: block;
-            border: 2px solid #003d99;
-            transition: all 0.3s ease;
-        }
-
-        .cta-bottom-presencial:hover {
-            background: #003d99;
-            color: white;
-        }
-
-        /* ===== FOOTER SEGURIDAD ===== */
-        .footer-secure {
-            font-size: 11px;
-            color: #94a3b8;
-            margin-top: 20px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 16px;
-            flex-wrap: wrap;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 18px;
-        }
-
-        .footer-secure span {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: 500;
-            color: #475569;
-        }
-
-        .footer-secure .icon {
-            font-size: 16px;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 380px) {
-            .title { font-size: 24px; }
-            .price-main { font-size: 30px; }
-            .hbo-bonus .series-grid { grid-template-columns: repeat(3, 1fr); gap: 4px; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="landing-container">
-
-        <!-- ===== BARRA DE URGENCIA ===== -->
-        <div class="urgency-bar">
-            ⚡ SOLO 2 INSTALACIONES DISPONIBLES HOY EN QUERÉTARO Y CORREGIDORA
-        </div>
-
-        <!-- ===== HERO ===== -->
-        <section class="hero-section">
-            <span class="hero-badge">✔️ Contratación 100% Digital</span>
-            <h1 class="title">
-                Estrenas Casa, <br><span class="highlight">Nosotros te Conectamos</span>
-            </h1>
-            <p class="subtitle">
-                <strong>200 Megas + 170 canales + 4 apps de Amazon</strong><br>
-                con <strong>HBO MAX 6 meses en PROMO</strong>.<br>
-                Instalación GRATIS con solo $100 de adelanto.
-            </p>
-        </section>
-
-        <!-- ===== CTAs SUPERIORES (Acción Inmediata) ===== -->
-        <div class="cta-top-container">
-            <div class="label">⚡ Contrata ahora en 2 minutos</div>
-
-            <!-- WhatsApp -->
-            <a href="https://api.whatsapp.com/send?phone=524464044521&text=Hola,%20quiero%20contratar%20por%20WhatsApp%20el%20Triple%20Pack%20con%20HBO%20MAX%206%20meses%20en%20Querétaro." 
-               class="cta-top-whatsapp" target="_blank">
-                💬 Contratar por WhatsApp
-                <span class="sub">⏱️ Atención inmediata</span>
-            </a>
-
-            <!-- Presencial -->
-            <a href="https://api.whatsapp.com/send?phone=524464044521&text=Hola,%20quiero%20que%20vengan%20a%20mi%20casa%20a%20contratar%20el%20Triple%20Pack%20con%20HBO%20MAX%206%20meses%20en%20Querétaro." 
-               class="cta-top-presencial" target="_blank">
-                🏠 Prefiero que vengan a mi casa
-            </a>
-        </div>
-
-        <!-- ===== DOLOR VS FELICIDAD ===== -->
-        <div class="pain-happy-section">
-            <div class="pain-box">
-                <!-- Imagen de stock: persona frustrada sin internet -->
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Persona frustrada">
-                <div class="label">❌ Antes (Dolor)</div>
-                <div class="desc">Sin internet, sin canales, sin entretenimiento</div>
-            </div>
-            <div class="happy-box">
-                <!-- Imagen de stock: familia feliz viendo TV -->
-                <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=150&h=150&fit=crop&crop=center" alt="Familia feliz viendo TV">
-                <div class="label">✅ Ahora (Felicidad)</div>
-                <div class="desc">200 Megas + 170 canales + Amazon + HBO 6 meses</div>
-            </div>
-        </div>
-
-        <!-- ===== CONTENIDO PRINCIPAL ===== -->
-        <main class="main-content">
-
-            <!-- ===== TARJETA TRIPLE PACK ===== -->
-            <div class="decision-card">
-                <span class="pop-badge">🔥 MÁS SOLICITADO</span>
-                <h2>🚀 Triple Pack Conecta Total</h2>
-
-                <!-- VENTAJA: 6 MESES -->
-                <div class="advantage-badge">
-                    <span class="icon">🎯</span> Todos piden 1 año, nosotros solo 6 meses
-                </div>
-
-                <div class="price-tag">
-                    <span class="price-sub">Instalación GRATIS con solo</span>
-                    <span class="price-main">$100 <span>MXN</span></span>
-                    <span class="price-note">✅ <small>Son un adelanto, se descuentan de tu primer mes</small></span>
-                </div>
-
-                <div class="price-real">
-                    <span class="label">Paquete completo por solo</span>
-                    <span class="amount">$500 <small>MXN/mes</small></span>
-                </div>
-
-                <!-- ===== HBO BONUS CON LOGO Y SERIES ===== -->
-                <div class="hbo-bonus">
-                    <!-- Logo oficial de HBO MAX -->
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/HBO_Max_Logo.svg/2560px-HBO_Max_Logo.svg.png" 
-                         alt="HBO MAX Logo" class="hbo-logo" style="background: white; padding: 4px 12px; border-radius: 8px;">
-
-                    <div class="text">
-                        🎁 BONUS EXCLUSIVO: HBO MAX <span class="duration">6 MESES EN PROMO</span>
-                        <small>Disfruta de las mejores series y películas en 4K</small>
-                    </div>
-
-                    <!-- Grid de series populares de HBO -->
-                    <div class="series-grid">
-                        <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?w=200&h=300&fit=crop" alt="Serie HBO" loading="lazy">
-                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=200&h=300&fit=crop" alt="Serie HBO" loading="lazy">
-                        <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=200&h=300&fit=crop" alt="Serie HBO" loading="lazy">
-                    </div>
-                </div>
-
-                <div class="divider"></div>
-
-                <!-- BENEFICIOS -->
-                <ul class="neuro-benefits">
-                    <li>
-                        <span class="icon-check">✓</span>
-                        <span><strong>200 Megas Simétricos</strong> — Velocidad real para gaming, streaming y trabajo.</span>
-                    </li>
-                    <li>
-                        <span class="icon-check">✓</span>
-                        <span><strong><span class="highlight-blue">170 canales</span></strong> — Televisión de paga en HD.</span>
-                    </li>
-                    <li>
-                        <span class="icon-check">✓</span>
-                        <span><strong><span class="highlight-blue">4 apps de Amazon</span></strong> — Prime Video, Freevee, Amazon Music y más.</span>
-                    </li>
-                    <li>
-                        <span class="icon-check">✓</span>
-                        <span><strong>Fibra Óptica Directa</strong> — Señal estable incluso en tormentas.</span>
-                    </li>
-                    <li>
-                        <span class="icon-check">✓</span>
-                        <span><strong><span class="highlight-green">Solo 6 meses</span></strong> — Mientras todos piden 1 año, nosotros te damos más flexibilidad.</span>
-                    </li>
-                </ul>
-
-                <!-- PRUEBA SOCIAL -->
-                <div class="testimonial-mini">
-                    <span class="stars">⭐⭐⭐⭐⭐</span>
-                    <span>“¡El HBO MAX de regalo fue lo mejor! Contraté en 5 minutos.”</span>
-                    <span class="name">— Laura M. (Corregidora)</span>
-                </div>
-            </div>
-
-            <!-- ===== CTAs INFERIORES (Refuerzo) ===== -->
-            <div class="cta-bottom-container">
-
-                <a href="https://api.whatsapp.com/send?phone=524464044521&text=Hola,%20quiero%20contratar%20por%20WhatsApp%20el%20Triple%20Pack%20con%20HBO%20MAX%206%20meses%20en%20Querétaro." 
-                   class="cta-bottom-whatsapp" target="_blank">
-                    💬 Contratar por WhatsApp
-                    <span class="sub">⏱️ Atención en menos de 2 minutos</span>
-                </a>
-
-                <a href="https://api.whatsapp.com/send?phone=524464044521&text=Hola,%20quiero%20que%20vengan%20a%20mi%20casa%20a%20contratar%20el%20Triple%20Pack%20con%20HBO%20MAX%206%20meses%20en%20Querétaro." 
-                   class="cta-bottom-presencial" target="_blank">
-                    🏠 Prefiero que vengan a mi casa
-                </a>
-
-            </div>
-
-            <!-- ===== FOOTER SEGURIDAD ===== -->
-            <div class="footer-secure">
-                <span><span class="icon">🔒</span> Datos Seguros</span>
-                <span><span class="icon">🛡️</span> Instalación Garantizada</span>
-                <span><span class="icon">📱</span> Soporte en Vivo</span>
-                <span><span class="icon">✅</span> 100% Sin Engaños</span>
-            </div>
-
-        </main>
-    </div>
-
-</body>
-</html>
+<!-- SECCIÓN PRINCIPAL DE OFERTA --><div class="offer-card"><div class="offer-badge">
+🔥 PAQUETE MÁS CONTRATADO EN QUERÉTARO
+</div><h2>
+🚀 Triple Pack Conecta Total
+</h2><div class="main-price"><div class="price-label">
+TODO INCLUIDO POR SOLO
+</div><div class="price">
+$500
+<span>/mes</span>
+</div></div><div class="package-items"><div class="item">
+🌐 <strong>200 Megas</strong> de Internet por Fibra Óptica
+</div><div class="item">
+📺 <strong>170 Canales</strong> en TV Xview
+</div><div class="item">
+📞 <strong>Llamadas Ilimitadas</strong>
+</div><div class="item">
+🎵 <strong>4 Aplicaciones de Amazon</strong> incluidas
+</div><div class="item">
+🚚 <strong>Instalación sin costo</strong>
+</div><div class="item">
+💰 Contrata con solo <strong>$100 de adelanto</strong>
+</div></div></div><!-- HBO MAX COMO UPSELL --><div class="upsell-card"><div class="upsell-title">
+🎬 ¿Quieres más entretenimiento?
+</div><div class="upsell-subtitle">
+Agrega HBO Max a tu paquete
+</div><div class="upsell-price">
++$80 al mes
+</div><div class="upsell-benefits">✔ Series exclusivas
+
+✔ Estrenos de cine
+
+✔ Películas en HD
+
+✔ Contenido para toda la familia
+
+</div></div><!-- BENEFICIOS --><div class="trust-section"><div class="trust-item">
+✅ Atención por WhatsApp
+</div><div class="trust-item">
+✅ Verificación de cobertura inmediata
+</div><div class="trust-item">
+✅ Contratación rápida
+</div><div class="trust-item">
+✅ Instalación programada
+</div></div><!-- CTA --><a
+href="https://wa.me/524464044521?text=Hola,%20quiero%20información%20del%20Triple%20Pack%20de%20$500."
+class="cta-whatsapp">
+
+🟢 VERIFICAR COBERTURA AHORA
+
+</a><p class="cta-note">
+⚡ Atención personalizada por WhatsApp
+</p><!-- TESTIMONIO --><div class="testimonial">⭐⭐⭐⭐⭐
+
+<p>
+"Me acababa de mudar y me ayudaron a contratar muy rápido."
+</p><strong>
+Cliente de Querétaro
+</strong></div><style>
+
+.offer-card{
+background:#fff;
+padding:25px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+margin-bottom:20px;
+}
+
+.offer-badge{
+background:#ff6b35;
+color:#fff;
+display:inline-block;
+padding:8px 14px;
+border-radius:50px;
+font-size:12px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.offer-card h2{
+font-size:28px;
+color:#003399;
+margin-bottom:15px;
+font-weight:800;
+}
+
+.main-price{
+text-align:center;
+margin-bottom:20px;
+}
+
+.price-label{
+font-size:13px;
+color:#666;
+margin-bottom:5px;
+}
+
+.price{
+font-size:52px;
+font-weight:900;
+color:#003399;
+}
+
+.price span{
+font-size:18px;
+font-weight:500;
+}
+
+.package-items{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.item{
+padding:12px;
+background:#f7f9fc;
+border-radius:12px;
+font-size:15px;
+}
+
+.upsell-card{
+background:linear-gradient(135deg,#111,#2d2d2d);
+color:white;
+padding:25px;
+border-radius:25px;
+margin-bottom:20px;
+text-align:center;
+}
+
+.upsell-title{
+font-size:20px;
+font-weight:800;
+margin-bottom:8px;
+}
+
+.upsell-subtitle{
+font-size:14px;
+opacity:.9;
+}
+
+.upsell-price{
+font-size:42px;
+font-weight:900;
+margin:15px 0;
+color:#b388ff;
+}
+
+.upsell-benefits{
+line-height:2;
+font-size:14px;
+}
+
+.trust-section{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-bottom:25px;
+}
+
+.trust-item{
+background:#f0f5ff;
+padding:12px;
+border-radius:12px;
+font-size:13px;
+text-align:center;
+font-weight:600;
+}
+
+.cta-whatsapp{
+display:block;
+background:#25D366;
+color:white;
+text-decoration:none;
+padding:20px;
+border-radius:60px;
+text-align:center;
+font-size:18px;
+font-weight:800;
+box-shadow:0 8px 25px rgba(37,211,102,.35);
+}
+
+.cta-note{
+text-align:center;
+margin-top:10px;
+color:#666;
+font-size:13px;
+}
+
+.testimonial{
+margin-top:25px;
+background:#fff8e1;
+padding:20px;
+border-radius:20px;
+text-align:center;
+font-size:14px;
+}
+
+</style>
