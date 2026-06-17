@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Fibra Óptica en Querétaro + HBO Gratis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Internet Fibra Óptica + HBO MAX 6 Meses - Querétaro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* --- Reset y Estilos Base --- */
+        /* ===== RESET Y BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -15,7 +15,7 @@
         }
 
         body {
-            background: #0f172a;
+            background: #0a1628;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -26,179 +26,307 @@
         .landing-container {
             background: #ffffff;
             width: 100%;
-            max-width: 450px;
+            max-width: 480px;
             min-height: 100vh;
-            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.6);
             display: flex;
             flex-direction: column;
             position: relative;
+            overflow: hidden;
         }
 
-        /* --- 1. BARRA DE URGENCIA MEJORADA (Más específica y con escasez) --- */
+        /* ===== BARRA DE URGENCIA (Escasez) ===== */
         .urgency-bar {
             background: #ffcc00;
             color: #001f66;
             text-align: center;
-            padding: 10px 8px;
-            font-size: 12px;
+            padding: 12px 8px;
+            font-size: 13px;
             font-weight: 800;
             letter-spacing: 0.5px;
             text-transform: uppercase;
-            animation: pulseUrgency 2s infinite;
-        }
-        @keyframes pulseUrgency {
-            0% { opacity: 0.9; }
-            50% { opacity: 1; background: #ffe066; }
-            100% { opacity: 0.9; }
+            animation: pulseUrgency 1.8s infinite;
+            border-bottom: 3px solid #e6b800;
         }
 
-        /* --- 2. HERO: Mejor claridad en el mensaje --- */
+        @keyframes pulseUrgency {
+            0% { opacity: 0.9; background: #ffcc00; }
+            50% { opacity: 1; background: #ffe066; }
+            100% { opacity: 0.9; background: #ffcc00; }
+        }
+
+        /* ===== HERO (Azul Megacable Premium) ===== */
         .hero-section {
-            background: linear-gradient(180deg, #002d72 0%, #00153b 100%);
+            background: linear-gradient(145deg, #003d99 0%, #002266 100%);
             color: white;
-            padding: 45px 24px 35px 24px;
+            padding: 40px 24px 30px 24px;
             text-align: center;
-            border-bottom-left-radius: 40px;
-            border-bottom-right-radius: 40px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 200px;
+            height: 200px;
+            background: rgba(0, 180, 255, 0.08);
+            border-radius: 50%;
+            pointer-events: none;
         }
 
         .hero-badge {
-            background: rgba(0, 210, 255, 0.15);
-            color: #00d2ff;
-            padding: 6px 16px;
+            background: rgba(0, 210, 255, 0.2);
+            color: #66d9ff;
+            padding: 6px 18px;
             border-radius: 50px;
             font-size: 12px;
             font-weight: 700;
             display: inline-block;
             margin-bottom: 15px;
             border: 1px solid rgba(0, 210, 255, 0.3);
+            backdrop-filter: blur(5px);
         }
 
         .title {
-            font-size: 28px;
-            font-weight: 800;
-            line-height: 1.2;
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 1.15;
             margin-bottom: 12px;
             letter-spacing: -0.5px;
         }
-        .title span {
-            color: #ffcc00; /* Destacar una palabra clave */
+
+        .title .highlight {
+            color: #ffcc00;
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .subtitle {
             font-size: 14px;
-            color: #cbd5e1;
-            line-height: 1.5;
+            color: #b8d4f0;
+            line-height: 1.6;
             font-weight: 400;
         }
 
-        /* --- 3. CUERPO PRINCIPAL --- */
+        .subtitle strong {
+            color: #ffcc00;
+            font-weight: 700;
+        }
+
+        /* ===== SECCIÓN DOLOR VS FELICIDAD ===== */
+        .pain-happy-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            padding: 20px 24px 10px 24px;
+            background: #f0f5ff;
+        }
+
+        .pain-box, .happy-box {
+            border-radius: 20px;
+            padding: 16px 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pain-box {
+            background: linear-gradient(145deg, #ff6b6b15, #ff6b6b08);
+            border: 2px solid #ff6b6b30;
+        }
+
+        .happy-box {
+            background: linear-gradient(145deg, #2ed57315, #2ed57308);
+            border: 2px solid #2ed57330;
+        }
+
+        .pain-box .emoji-big, .happy-box .emoji-big {
+            font-size: 52px;
+            margin-bottom: 6px;
+            line-height: 1;
+        }
+
+        .pain-box .label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #ff6b6b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .happy-box .label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #2ed573;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pain-box .desc, .happy-box .desc {
+            font-size: 11px;
+            color: #475569;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* ===== CUERPO PRINCIPAL ===== */
         .main-content {
-            padding: 30px 24px;
+            padding: 20px 24px 30px 24px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
             background: #f8fafc;
         }
 
-        /* --- 4. TARJETA DE DECISIÓN ÚNICA (Sin paradoja de elección) --- */
+        /* ===== TARJETA TRIPLE PACK (MÁS SOLICITADO) ===== */
         .decision-card {
             background: #ffffff;
-            border: 2px solid #e2e8f0;
-            border-radius: 24px;
-            padding: 24px 20px;
+            border: 2px solid #003d99;
+            border-radius: 28px;
+            padding: 24px 20px 20px 20px;
             width: 100%;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             position: relative;
-            box-shadow: 0px 15px 30px rgba(0, 31, 102, 0.08);
-            transition: border-color 0.3s ease;
+            box-shadow: 0px 20px 40px rgba(0, 61, 153, 0.12);
+            transition: all 0.3s ease;
         }
 
         .decision-card:hover {
-            border-color: #002d72;
+            transform: translateY(-2px);
+            box-shadow: 0px 25px 50px rgba(0, 61, 153, 0.18);
         }
 
         .pop-badge {
-            background: #2ed573;
+            background: linear-gradient(135deg, #ff6b35, #ff4500);
             color: white;
-            font-size: 11px;
-            font-weight: 700;
-            padding: 6px 16px;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 8px 20px;
             border-radius: 50px;
             position: absolute;
-            top: -14px;
+            top: -16px;
             left: 50%;
             transform: translateX(-50%);
-            box-shadow: 0px 4px 12px rgba(46, 213, 115, 0.3);
+            box-shadow: 0px 6px 20px rgba(255, 69, 0, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
         }
 
         .decision-card h2 {
             font-size: 22px;
-            color: #002d72;
-            font-weight: 800;
+            color: #003d99;
+            font-weight: 900;
             text-align: center;
-            margin-top: 8px;
+            margin-top: 10px;
         }
 
+        /* ===== PRECIO CON ANCLAJE ===== */
         .price-tag {
             text-align: center;
-            margin: 15px 0;
-            background: #f1f5f9;
-            padding: 10px 0;
+            margin: 15px 0 8px 0;
+            background: linear-gradient(145deg, #e6f0ff, #f0f5ff);
+            padding: 12px 0;
             border-radius: 16px;
         }
 
         .price-sub {
             font-size: 12px;
-            color: #64748b;
+            color: #475569;
             display: block;
+            font-weight: 600;
         }
 
         .price-main {
-            color: #0f172a;
-            font-size: 32px;
-            font-weight: 800;
+            color: #003d99;
+            font-size: 38px;
+            font-weight: 900;
         }
 
         .price-main span {
-            font-size: 14px;
+            font-size: 16px;
             color: #64748b;
             font-weight: 400;
         }
 
-        /* --- 5. NUEVO: BONUS DE HBO DESTACADO (Añadido el valor extra) --- */
+        .price-note {
+            font-size: 13px;
+            color: #2ed573;
+            font-weight: 700;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .price-note small {
+            font-weight: 400;
+            color: #475569;
+        }
+
+        /* ===== BONUS HBO (FELICIDAD) CON DURACIÓN DE 6 MESES ===== */
         .hbo-bonus {
-            background: #fce7f3; /* Fondo rosa suave para destacar */
+            background: linear-gradient(145deg, #fce7f3, #fdf2f8);
             border-left: 5px solid #ec4899;
-            padding: 12px 16px;
-            border-radius: 12px;
+            padding: 14px 16px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin: 15px 0;
+            gap: 14px;
+            margin: 12px 0 16px 0;
+            box-shadow: 0px 4px 12px rgba(236, 72, 153, 0.1);
+            animation: pulseHBO 3s infinite;
         }
+
+        @keyframes pulseHBO {
+            0% { border-left-color: #ec4899; }
+            50% { border-left-color: #ff6bcb; }
+            100% { border-left-color: #ec4899; }
+        }
+
         .hbo-bonus .icon {
-            font-size: 28px;
+            font-size: 32px;
         }
+
         .hbo-bonus .text {
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 700;
             color: #1e293b;
         }
+
+        .hbo-bonus .text .duration {
+            display: inline-block;
+            background: #ec4899;
+            color: white;
+            padding: 2px 12px;
+            border-radius: 50px;
+            font-size: 11px;
+            margin-left: 6px;
+        }
+
         .hbo-bonus .text small {
             font-weight: 400;
             color: #475569;
             display: block;
             font-size: 12px;
+            margin-top: 2px;
         }
 
         .divider {
             height: 1px;
             background: #e2e8f0;
-            margin: 15px 0;
+            margin: 12px 0;
         }
 
-        /* --- 6. LISTA DE BENEFICIOS (Enfocados en el cerebro reptiliano) --- */
+        /* ===== BENEFICIOS (Neuroventas) ===== */
         .neuro-benefits {
             list-style: none;
         }
@@ -213,73 +341,116 @@
         }
 
         .neuro-benefits li strong {
-            color: #0f172a;
+            color: #003d99;
+        }
+
+        .neuro-benefits li .highlight-blue {
+            background: #e6f0ff;
+            padding: 0 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            color: #003d99;
         }
 
         .icon-check {
             color: #2ed573;
             font-weight: 900;
             margin-right: 12px;
-            font-size: 16px;
-            margin-top: -1px;
+            font-size: 18px;
+            margin-top: -2px;
         }
 
-        /* --- 7. NUEVO: PRUEBA SOCIAL (Testimonio exprés) --- */
+        /* ===== PRUEBA SOCIAL ===== */
         .testimonial-mini {
-            background: #f1f5f9;
+            background: linear-gradient(145deg, #e6f0ff, #f0f5ff);
             padding: 12px 16px;
             border-radius: 50px;
             text-align: center;
             font-size: 13px;
             color: #334155;
-            margin: 10px 0 20px 0;
+            margin: 12px 0 18px 0;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-        }
-        .testimonial-mini span {
-            font-weight: 700;
-            color: #002d72;
+            border: 1px solid #b8d4f0;
+            flex-wrap: wrap;
         }
 
-        /* --- 8. BOTÓN DE ACCIÓN (CTA Magnético con refuerzo) --- */
-        .cta-magnetic {
-            background: #25d366;
+        .testimonial-mini .stars {
+            color: #ffcc00;
+            font-weight: 700;
+        }
+
+        .testimonial-mini .name {
+            font-weight: 700;
+            color: #003d99;
+        }
+
+        /* ===== DOBLE CTA (WhatsApp + Presencial) ===== */
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 6px;
+        }
+
+        .cta-whatsapp {
+            background: linear-gradient(145deg, #25d366, #1da851);
             color: white;
             text-decoration: none;
-            padding: 20px;
+            padding: 18px 20px;
             border-radius: 50px;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 16px;
             text-align: center;
             display: block;
-            box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.4);
+            box-shadow: 0px 8px 30px rgba(37, 211, 102, 0.35);
             transition: all 0.3s ease;
-            animation: pulseWave 2s infinite;
+            animation: pulseWave 2.2s infinite;
+            position: relative;
         }
-        .cta-magnetic:hover {
+
+        .cta-whatsapp:hover {
             transform: scale(1.02);
-            background: #20b859;
-            box-shadow: 0px 10px 30px rgba(37, 211, 102, 0.5);
+            background: linear-gradient(145deg, #20b859, #199347);
+            box-shadow: 0px 10px 40px rgba(37, 211, 102, 0.5);
+        }
+
+        .cta-whatsapp .sub-cta {
+            font-size: 11px;
+            font-weight: 400;
+            opacity: 0.85;
+            display: block;
         }
 
         @keyframes pulseWave {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
-            }
-            70% {
-                transform: scale(1.02);
-                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { transform: scale(1.02); box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* --- 9. FOOTER CON SELLOS DE SEGURIDAD --- */
+        .cta-presencial {
+            background: #ffffff;
+            color: #003d99;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            display: block;
+            border: 2px solid #003d99;
+            transition: all 0.3s ease;
+        }
+
+        .cta-presencial:hover {
+            background: #003d99;
+            color: white;
+            transform: scale(1.01);
+        }
+
+        /* ===== FOOTER SEGURIDAD ===== */
         .footer-secure {
             font-size: 11px;
             color: #94a3b8;
@@ -288,81 +459,168 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px;
+            gap: 16px;
             flex-wrap: wrap;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 18px;
         }
+
         .footer-secure span {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
+            font-weight: 500;
+            color: #475569;
         }
-        .footer-secure .secure-icon {
-            color: #0f172a;
+
+        .footer-secure .icon {
+            font-size: 16px;
+        }
+
+        /* ===== NUEVO: BADGE DE COMPROMISO 6 MESES ===== */
+        .commitment-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #003d99;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
             font-weight: 700;
+            margin: 8px auto 4px auto;
+            box-shadow: 0px 4px 12px rgba(0, 61, 153, 0.3);
+        }
+
+        .commitment-badge .icon {
+            font-size: 16px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 380px) {
+            .title { font-size: 24px; }
+            .price-main { font-size: 30px; }
+            .pain-box .emoji-big, .happy-box .emoji-big { font-size: 40px; }
+            .hbo-bonus { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
     <div class="landing-container">
-        <!-- Barra de Urgencia Mejorada -->
+
+        <!-- ===== BARRA DE URGENCIA ===== -->
         <div class="urgency-bar">
-            ⚡ ÚLTIMAS 3 INSTALACIONES DISPONIBLES HOY EN QUERÉTARO Y CORREGIDORA
+            ⚡ SOLO 2 INSTALACIONES DISPONIBLES HOY EN QUERÉTARO Y CORREGIDORA
         </div>
 
-        <!-- Hero Section -->
+        <!-- ===== HERO ===== -->
         <section class="hero-section">
-            <span class="hero-badge">✔️ Trámite 100% Digital</span>
-            <h1 class="title">Estrenas Casa, <span>Nosotros te Conectamos</span></h1>
-            <p class="subtitle">Olvídate del papeleo. Contrata fibra óptica hoy y disfruta de internet estable y rápido. <strong>Incluye HBO por tiempo limitado.</strong></p>
+            <span class="hero-badge">✔️ Contratación 100% Digital</span>
+            <h1 class="title">
+                Estrenas Casa, <br><span class="highlight">Nosotros te Conectamos</span>
+            </h1>
+            <p class="subtitle">
+                Fibra óptica de <strong>ultra velocidad</strong> con <strong>HBO MAX 6 meses en PROMO</strong>.<br>
+                Sin papeleo. <strong>Instalación GRATIS</strong> con solo $100.
+            </p>
         </section>
 
-        <!-- Contenido Principal -->
+        <!-- ===== DOLOR VS FELICIDAD ===== -->
+        <div class="pain-happy-section">
+            <div class="pain-box">
+                <div class="emoji-big">😤</div>
+                <div class="label">❌ Antes (Dolor)</div>
+                <div class="desc">Sin internet, sin series, sin trabajo</div>
+            </div>
+            <div class="happy-box">
+                <div class="emoji-big">🥳</div>
+                <div class="label">✅ Ahora (Felicidad)</div>
+                <div class="desc">+200 Megas, HBO MAX 6 meses y estabilidad</div>
+            </div>
+        </div>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
         <main class="main-content">
+
+            <!-- ===== TARJETA TRIPLE PACK ===== -->
             <div class="decision-card">
                 <span class="pop-badge">🔥 MÁS SOLICITADO</span>
-                <h2>Paquete Conecta Total</h2>
-                
-                <div class="price-tag">
-                    <span class="price-sub">Instalación + 1er mes desde</span>
-                    <span class="price-main">$100 <span>MXN</span></span>
+                <h2>🚀 Triple Pack Conecta Total</h2>
+
+                <!-- BADGE DE COMPROMISO 6 MESES -->
+                <div class="commitment-badge">
+                    <span class="icon">📅</span> Compromiso mínimo de 6 meses
                 </div>
 
-                <!-- BONUS HBO DESTACADO -->
+                <div class="price-tag">
+                    <span class="price-sub">Instalación GRATIS + 1er mes desde</span>
+                    <span class="price-main">$100 <span>MXN</span></span>
+                    <span class="price-note">✅ <small>Bloquea tu precio por 6 meses</small></span>
+                </div>
+
+                <!-- BONUS HBO CON DURACIÓN DE 6 MESES -->
                 <div class="hbo-bonus">
                     <div class="icon">🎬</div>
                     <div class="text">
-                        🎁 BONUS: Acceso a HBO MAX por 3 meses
-                        <small>Disfruta de las mejores series y películas en casa.</small>
+                        🎁 BONUS EXCLUSIVO: HBO MAX <span class="duration">6 MESES EN PROMO</span>
+                        <small>Disfruta de Dune, The Last of Us, Euphoria y más en 4K. <strong>¡Todo el primer semestre!</strong></small>
                     </div>
                 </div>
-                
+
                 <div class="divider"></div>
-                
-                <!-- Beneficios -->
+
+                <!-- BENEFICIOS CLAVE -->
                 <ul class="neuro-benefits">
-                    <li><span class="icon-check">✓</span> <span><strong>Hasta 200 Megas Simétricos:</strong> Velocidad real para toda tu familia, sin importar cuántos dispositivos estén conectados.</span></li>
-                    <li><span class="icon-check">✓</span> <span><strong>Fibra Óptica Directa a tu Hogar:</strong> Adiós a los cortes y a la lentitud en días de lluvia.</span></li>
-                    <li><span class="icon-check">✓</span> <span><strong>Sin Contrato de Permanencia:</strong> Tú decides, sin ataduras ni multas.</span></li>
+                    <li>
+                        <span class="icon-check">✓</span>
+                        <span><strong>200 Megas Simétricos</strong> — Velocidad real para gaming, streaming y trabajo sin interrupciones.</span>
+                    </li>
+                    <li>
+                        <span class="icon-check">✓</span>
+                        <span><strong>Fibra Óptica Directa</strong> — Señal estable incluso en tormentas. Adiós a los cortes.</span>
+                    </li>
+                    <li>
+                        <span class="icon-check">✓</span>
+                        <span><strong><span class="highlight-blue">6 meses</span> de compromiso</strong> — Tiempo justo para probar la mejor velocidad. Sin multas ocultas.</span>
+                    </li>
+                    <li>
+                        <span class="icon-check">✓</span>
+                        <span><strong>Instalación en 24 horas</strong> — Técnico certificado en tu domicilio.</span>
+                    </li>
                 </ul>
 
-                <!-- Prueba Social Rápida -->
+                <!-- PRUEBA SOCIAL -->
                 <div class="testimonial-mini">
-                    ⭐⭐⭐⭐⭐ <span>“En 20 minutos ya estaba conectado. Súper fácil.”</span> – Carlos R. (Querétaro)
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                    <span>“Con el HBO MAX de regalo, mis hijos están felices. ¡Contraté en 5 minutos!”</span>
+                    <span class="name">— Laura M. (Corregidora)</span>
                 </div>
             </div>
 
-            <!-- CTA Principal -->
-            <a href="https://api.whatsapp.com/send?phone=524464044521&text=Hola,%20quiero%20validar%20cobertura%20e%20instalar%20mi%20internet%20en%20Querétaro.%20Me%20interesa%20el%20bonus%20de%20HBO." class="cta-magnetic" target="_blank">
-                ⚡ Validar Cobertura e Instalar Ahora
-            </a>
-            
-            <!-- Footer con Sellos de Confianza -->
-            <div class="footer-secure">
-                <span>🔒 <span class="secure-icon">Datos Seguros</span></span>
-                <span>🛡️ <span class="secure-icon">Instalación Garantizada</span></span>
-                <span>📱 <span class="secure-icon">Soporte en Vivo</span></span>
+            <!-- ===== DOBLE CTA ===== -->
+            <div class="cta-container">
+                <!-- CTA 1: WhatsApp -->
+                <a href="https://api.whatsapp.com/send?phone=524464044521&text=Hola,%20quiero%20contratar%20el%20Triple%20Pack%20con%20HBO%20MAX%206%20meses%20en%20Querétaro." 
+                   class="cta-whatsapp" target="_blank">
+                    💬 Contratar por WhatsApp (Más Rápido)
+                    <span class="sub-cta">⏱️ Atención en menos de 2 minutos</span>
+                </a>
+
+                <!-- CTA 2: Presencial -->
+                <a href="#" class="cta-presencial" onclick="alert('📞 Llámanos al 442 123 4567 o visítanos en Av. Tecnológico 123, Querétaro.'); return false;">
+                    🏢 Prefiero contratar en persona
+                </a>
             </div>
+
+            <!-- ===== FOOTER DE SEGURIDAD ===== -->
+            <div class="footer-secure">
+                <span><span class="icon">🔒</span> Datos Seguros</span>
+                <span><span class="icon">🛡️</span> Instalación Garantizada</span>
+                <span><span class="icon">📱</span> Soporte en Vivo</span>
+                <span><span class="icon">✅</span> 100% Sin Engaños</span>
+            </div>
+
         </main>
     </div>
 
