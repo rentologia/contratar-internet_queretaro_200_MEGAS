@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contrata Internet en Querétaro - Fibra Óptica</title>
+    <title>Internet Fibra Óptica en Querétaro + HBO Gratis</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* --- Reset y Estilos Base --- */
         * {
             margin: 0;
             padding: 0;
@@ -33,19 +34,25 @@
             position: relative;
         }
 
-        /* Barra de Urgencia/Escasez (Gatillo Mental) */
+        /* --- 1. BARRA DE URGENCIA MEJORADA (Más específica y con escasez) --- */
         .urgency-bar {
             background: #ffcc00;
             color: #001f66;
             text-align: center;
-            padding: 8px;
-            font-size: 11px;
+            padding: 10px 8px;
+            font-size: 12px;
             font-weight: 800;
             letter-spacing: 0.5px;
             text-transform: uppercase;
+            animation: pulseUrgency 2s infinite;
+        }
+        @keyframes pulseUrgency {
+            0% { opacity: 0.9; }
+            50% { opacity: 1; background: #ffe066; }
+            100% { opacity: 0.9; }
         }
 
-        /* Hero: Foco en la solución */
+        /* --- 2. HERO: Mejor claridad en el mensaje --- */
         .hero-section {
             background: linear-gradient(180deg, #002d72 0%, #00153b 100%);
             color: white;
@@ -74,6 +81,9 @@
             margin-bottom: 12px;
             letter-spacing: -0.5px;
         }
+        .title span {
+            color: #ffcc00; /* Destacar una palabra clave */
+        }
 
         .subtitle {
             font-size: 14px;
@@ -82,7 +92,7 @@
             font-weight: 400;
         }
 
-        /* Cuerpo principal */
+        /* --- 3. CUERPO PRINCIPAL --- */
         .main-content {
             padding: 30px 24px;
             display: flex;
@@ -91,16 +101,16 @@
             background: #f8fafc;
         }
 
-        /* Tarjeta de Decisión Fácil (Evita la paradoja de la elección) */
+        /* --- 4. TARJETA DE DECISIÓN ÚNICA (Sin paradoja de elección) --- */
         .decision-card {
             background: #ffffff;
             border: 2px solid #e2e8f0;
             border-radius: 24px;
-            padding: 24px;
+            padding: 24px 20px;
             width: 100%;
             margin-bottom: 25px;
             position: relative;
-            box-shadow: 0px 15px 30px rgba(0, 31, 102, 0.05);
+            box-shadow: 0px 15px 30px rgba(0, 31, 102, 0.08);
             transition: border-color 0.3s ease;
         }
 
@@ -123,15 +133,19 @@
         }
 
         .decision-card h2 {
-            font-size: 24px;
+            font-size: 22px;
             color: #002d72;
             font-weight: 800;
             text-align: center;
+            margin-top: 8px;
         }
 
         .price-tag {
             text-align: center;
             margin: 15px 0;
+            background: #f1f5f9;
+            padding: 10px 0;
+            border-radius: 16px;
         }
 
         .price-sub {
@@ -152,13 +166,39 @@
             font-weight: 400;
         }
 
+        /* --- 5. NUEVO: BONUS DE HBO DESTACADO (Añadido el valor extra) --- */
+        .hbo-bonus {
+            background: #fce7f3; /* Fondo rosa suave para destacar */
+            border-left: 5px solid #ec4899;
+            padding: 12px 16px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 15px 0;
+        }
+        .hbo-bonus .icon {
+            font-size: 28px;
+        }
+        .hbo-bonus .text {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        .hbo-bonus .text small {
+            font-weight: 400;
+            color: #475569;
+            display: block;
+            font-size: 12px;
+        }
+
         .divider {
             height: 1px;
             background: #e2e8f0;
             margin: 15px 0;
         }
 
-        /* Lista de beneficios orientados al cerebro reptiliano */
+        /* --- 6. LISTA DE BENEFICIOS (Enfocados en el cerebro reptiliano) --- */
         .neuro-benefits {
             list-style: none;
         }
@@ -184,7 +224,26 @@
             margin-top: -1px;
         }
 
-        /* Botón de Acción Magnético */
+        /* --- 7. NUEVO: PRUEBA SOCIAL (Testimonio exprés) --- */
+        .testimonial-mini {
+            background: #f1f5f9;
+            padding: 12px 16px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 13px;
+            color: #334155;
+            margin: 10px 0 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .testimonial-mini span {
+            font-weight: 700;
+            color: #002d72;
+        }
+
+        /* --- 8. BOTÓN DE ACCIÓN (CTA Magnético con refuerzo) --- */
         .cta-magnetic {
             background: #25d366;
             color: white;
@@ -199,6 +258,11 @@
             transition: all 0.3s ease;
             animation: pulseWave 2s infinite;
         }
+        .cta-magnetic:hover {
+            transform: scale(1.02);
+            background: #20b859;
+            box-shadow: 0px 10px 30px rgba(37, 211, 102, 0.5);
+        }
 
         @keyframes pulseWave {
             0% {
@@ -206,7 +270,7 @@
                 box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
             }
             70% {
-                transform: scale(1.03);
+                transform: scale(1.02);
                 box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
             }
             100% {
@@ -215,6 +279,7 @@
             }
         }
 
+        /* --- 9. FOOTER CON SELLOS DE SEGURIDAD --- */
         .footer-secure {
             font-size: 11px;
             color: #94a3b8;
@@ -223,48 +288,80 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .footer-secure span {
+            display: inline-flex;
+            align-items: center;
             gap: 5px;
+        }
+        .footer-secure .secure-icon {
+            color: #0f172a;
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
 
     <div class="landing-container">
+        <!-- Barra de Urgencia Mejorada -->
         <div class="urgency-bar">
-            ⚡ Instalaciones disponibles hoy en Querétaro y Corregidora
+            ⚡ ÚLTIMAS 3 INSTALACIONES DISPONIBLES HOY EN QUERÉTARO Y CORREGIDORA
         </div>
 
+        <!-- Hero Section -->
         <section class="hero-section">
-            <span class="hero-badge">Trámite 100% Digital</span>
-            <h1 class="title">¿Estrenando casa? No te quedes sin internet</h1>
-            <p class="subtitle">Conecta tu hogar hoy mismo con Fibra Óptica de alta velocidad. Sin contratos aburridos ni filas eternas.</p>
+            <span class="hero-badge">✔️ Trámite 100% Digital</span>
+            <h1 class="title">Estrenas Casa, <span>Nosotros te Conectamos</span></h1>
+            <p class="subtitle">Olvídate del papeleo. Contrata fibra óptica hoy y disfruta de internet estable y rápido. <strong>Incluye HBO por tiempo limitado.</strong></p>
         </section>
 
+        <!-- Contenido Principal -->
         <main class="main-content">
             <div class="decision-card">
-                <span class="pop-badge">MÁS SOLICITADO</span>
-                <h2>Paquete Alta Velocidad</h2>
+                <span class="pop-badge">🔥 MÁS SOLICITADO</span>
+                <h2>Paquete Conecta Total</h2>
                 
                 <div class="price-tag">
-                    <span class="price-sub">Suscripción e instalación desde</span>
+                    <span class="price-sub">Instalación + 1er mes desde</span>
                     <span class="price-main">$100 <span>MXN</span></span>
+                </div>
+
+                <!-- BONUS HBO DESTACADO -->
+                <div class="hbo-bonus">
+                    <div class="icon">🎬</div>
+                    <div class="text">
+                        🎁 BONUS: Acceso a HBO MAX por 3 meses
+                        <small>Disfruta de las mejores series y películas en casa.</small>
+                    </div>
                 </div>
                 
                 <div class="divider"></div>
                 
+                <!-- Beneficios -->
                 <ul class="neuro-benefits">
-                    <li><span class="icon-check">✓</span> <span><strong>Hasta 200 Megas:</strong> Navega, trabaja y juega en familia al mismo tiempo sin trabas.</span></li>
-                    <li><span class="icon-check">✓</span> <span><strong>Fibra Óptica Directa:</strong> Máxima estabilidad incluso en días lluviosos.</span></li>
-                    <li><span class="icon-check">✓</span> <span><strong>Cero Papeleo:</strong> Validación inmediata solo con tus calles.</span></li>
+                    <li><span class="icon-check">✓</span> <span><strong>Hasta 200 Megas Simétricos:</strong> Velocidad real para toda tu familia, sin importar cuántos dispositivos estén conectados.</span></li>
+                    <li><span class="icon-check">✓</span> <span><strong>Fibra Óptica Directa a tu Hogar:</strong> Adiós a los cortes y a la lentitud en días de lluvia.</span></li>
+                    <li><span class="icon-check">✓</span> <span><strong>Sin Contrato de Permanencia:</strong> Tú decides, sin ataduras ni multas.</span></li>
                 </ul>
+
+                <!-- Prueba Social Rápida -->
+                <div class="testimonial-mini">
+                    ⭐⭐⭐⭐⭐ <span>“En 20 minutos ya estaba conectado. Súper fácil.”</span> – Carlos R. (Querétaro)
+                </div>
             </div>
 
-            <a href="https://api.whatsapp.com/send?phone=524464044521&text=Hola,%20quiero%20validar%20cobertura%20e%20instalar%20mi%20internet%20en%20Querétaro." class="cta-magnetic" target="_blank">
-                ⚡ Validar Cobertura e Instalar Ya
+            <!-- CTA Principal -->
+            <a href="https://api.whatsapp.com/send?phone=524464044521&text=Hola,%20quiero%20validar%20cobertura%20e%20instalar%20mi%20internet%20en%20Querétaro.%20Me%20interesa%20el%20bonus%20de%20HBO." class="cta-magnetic" target="_blank">
+                ⚡ Validar Cobertura e Instalar Ahora
             </a>
             
+            <!-- Footer con Sellos de Confianza -->
             <div class="footer-secure">
-                🔒 Tu solicitud será atendida por un asesor autorizado en tiempo real.
+                <span>🔒 <span class="secure-icon">Datos Seguros</span></span>
+                <span>🛡️ <span class="secure-icon">Instalación Garantizada</span></span>
+                <span>📱 <span class="secure-icon">Soporte en Vivo</span></span>
             </div>
         </main>
     </div>
