@@ -170,31 +170,32 @@
             padding: 0 6px;
         }
 
-        /* ===== BANNER DEL COMERCIAL (CON MODAL) ===== */
+        /* ===== BANNER DEL COMERCIAL (MÁS GRANDE Y CON MODAL) ===== */
         .commercial-banner {
             background: #f0f5ff;
-            padding: 10px 20px;
+            padding: 14px 20px;
             text-align: center;
             border-bottom: 2px solid #e2e8f0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
+            gap: 8px;
             cursor: pointer;
         }
 
         .commercial-banner img {
-            max-height: 55px;
-            width: auto;
-            border-radius: 8px;
-            object-fit: cover;
+            max-height: 140px;
+            width: 100%;
+            max-width: 400px;
+            object-fit: contain;
+            border-radius: 12px;
             border: 2px solid #b8d4f0;
             transition: transform 0.2s;
         }
 
         .commercial-banner img:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
         .commercial-banner span {
@@ -451,11 +452,11 @@
             color: #64748b;
         }
 
-        /* ===== HBO BONUS CON LOGO (RECTANGULAR Y CON MODAL) ===== */
+        /* ===== HBO BONUS (LOGO SIN MARCO, DE LADO A LADO) ===== */
         .hbo-bonus {
-            background: linear-gradient(145deg, #0a0a0a, #1a1a2e);
+            background: #0a0a0a;
             border-radius: 20px;
-            padding: 20px 18px;
+            padding: 20px 16px;
             margin: 14px 0 18px 0;
             text-align: center;
             box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.25);
@@ -477,21 +478,17 @@
         }
 
         .hbo-bonus .hbo-logo {
-            max-width: 220px;
             width: 100%;
+            max-width: 320px;
             height: auto;
-            margin-bottom: 12px;
-            background: white;
-            padding: 8px 16px;
-            border-radius: 12px;
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-            display: inline-block;
+            display: block;
+            margin: 0 auto 12px auto;
             cursor: pointer;
             transition: transform 0.2s;
         }
 
         .hbo-bonus .hbo-logo:hover {
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
 
         .hbo-bonus .text {
@@ -589,19 +586,19 @@
             flex-shrink: 0;
         }
 
-        /* ===== PRUEBA SOCIAL ===== */
+        /* ===== TESTIMONIOS (TODOS RECTANGULARES) ===== */
         .testimonial-mini {
             background: linear-gradient(145deg, #e6f0ff, #f0f5ff);
-            padding: 13px 16px;
-            border-radius: 50px;
+            padding: 14px 16px;
+            border-radius: 16px;
             text-align: center;
             font-size: 12px;
             color: #334155;
-            margin: 14px 0 20px 0;
+            margin: 14px 0 14px 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
             border: 2px solid #b8d4f0;
             flex-wrap: wrap;
             transition: all 0.3s ease;
@@ -622,6 +619,77 @@
         .testimonial-mini .name {
             font-weight: 800;
             color: #003d99;
+        }
+
+        .testimonial-mini .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid #b8d4f0;
+            flex-shrink: 0;
+        }
+
+        .testimonials-carousel {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 0 0 18px 0;
+        }
+
+        .testimonial-card {
+            background: linear-gradient(145deg, #f0f5ff, #e6f0ff);
+            padding: 12px 14px;
+            border-radius: 16px;
+            font-size: 12px;
+            color: #334155;
+            border: 1.5px solid #b8d4f0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            background: linear-gradient(145deg, #d0e2ff, #e6f0ff);
+            border-color: #003d99;
+            box-shadow: 0px 6px 16px rgba(0, 61, 153, 0.12);
+        }
+
+        .testimonial-card .avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid #b8d4f0;
+            flex-shrink: 0;
+        }
+
+        .testimonial-card .content {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            flex: 1;
+        }
+
+        .testimonial-card .stars {
+            color: #ffcc00;
+            font-weight: 900;
+            font-size: 12px;
+        }
+
+        .testimonial-card .text {
+            font-weight: 600;
+            line-height: 1.4;
+            color: #1f2937;
+        }
+
+        .testimonial-card .author {
+            font-weight: 800;
+            color: #003d99;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         /* ===== CTAs INFERIORES ===== */
@@ -687,53 +755,6 @@
             transform: translateY(-2px);
         }
 
-        /* ===== MÚLTIPLES TESTIMONIOS ===== */
-        .testimonials-carousel {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin: 18px 0 18px 0;
-        }
-
-        .testimonial-card {
-            background: linear-gradient(145deg, #f0f5ff, #e6f0ff);
-            padding: 12px 14px;
-            border-radius: 16px;
-            font-size: 12px;
-            color: #334155;
-            border: 1.5px solid #b8d4f0;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            background: linear-gradient(145deg, #d0e2ff, #e6f0ff);
-            border-color: #003d99;
-            box-shadow: 0px 6px 16px rgba(0, 61, 153, 0.12);
-        }
-
-        .testimonial-card .stars {
-            color: #ffcc00;
-            font-weight: 900;
-            font-size: 12px;
-        }
-
-        .testimonial-card .text {
-            font-weight: 600;
-            line-height: 1.4;
-            color: #1f2937;
-        }
-
-        .testimonial-card .author {
-            font-weight: 800;
-            color: #003d99;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
         /* ===== FOOTER SEGURIDAD ===== */
         .footer-secure {
             font-size: 11px;
@@ -783,12 +804,12 @@
         }
 
         .modal-overlay img {
-            max-width: 90%;
-            max-height: 90%;
+            max-width: 95%;
+            max-height: 95%;
             object-fit: contain;
-            border-radius: 16px;
+            border-radius: 12px;
             box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.8);
-            border: 3px solid rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.1);
             animation: zoomIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
@@ -851,11 +872,17 @@
             }
 
             .commercial-banner img {
-                max-height: 40px;
+                max-height: 100px;
             }
 
             .hbo-bonus .hbo-logo {
-                max-width: 180px;
+                max-width: 240px;
+            }
+
+            .testimonial-card {
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
             }
         }
 
@@ -875,6 +902,10 @@
             .urgency-bar {
                 font-size: 10px;
                 padding: 10px 8px;
+            }
+
+            .commercial-banner img {
+                max-height: 80px;
             }
         }
 
@@ -917,9 +948,9 @@
             </p>
         </section>
 
-        <!-- ===== BANNER DEL COMERCIAL (CON MODAL) ===== -->
+        <!-- ===== BANNER DEL COMERCIAL (NUEVA IMAGEN, MÁS GRANDE) ===== -->
         <div class="commercial-banner" onclick="openModal(this.querySelector('img').src)">
-            <img src="https://i.ibb.co/N6TQ0qZW/comercial.jpg" alt="Comercial Megacable" loading="lazy">
+            <img src="https://i.ibb.co/fVgYPD2d/comercial-grande.jpg" alt="Comercial Megacable" loading="lazy">
             <span>📺 Como lo viste en TV y en Facebook</span>
         </div>
 
@@ -967,9 +998,9 @@
                     <span class="amount">$500 <small>MXN/mes</small></span>
                 </div>
 
-                <!-- ===== HBO BONUS CON LOGO RECTANGULAR Y MODAL ===== -->
+                <!-- ===== HBO BONUS (LOGO SIN MARCO, DE LADO A LADO) ===== -->
                 <div class="hbo-bonus">
-                    <img src="https://i.ibb.co/qYc7PYpL/hbo-logo.png" 
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/HBO_Max_Logo.svg/2560px-HBO_Max_Logo.svg.png" 
                          alt="HBO MAX Logo" 
                          class="hbo-logo" 
                          loading="lazy"
@@ -1011,24 +1042,35 @@
                     </li>
                 </ul>
 
-                <!-- ===== PRUEBA SOCIAL PRINCIPAL ===== -->
+                <!-- ===== TESTIMONIOS (TODOS RECTANGULARES CON FOTOS) ===== -->
+                <!-- Testimonio 1: Laura M. -->
                 <div class="testimonial-mini">
+                    <img src="https://i.ibb.co/BKf9rZtM/laura-m.jpg" alt="Laura M." class="avatar" loading="lazy">
                     <span class="stars">⭐⭐⭐⭐⭐</span>
                     <span>"¡Contratar fue facilísimo! El HBO fue lo mejor 😍"</span>
                     <span class="name">— Laura M.</span>
                 </div>
 
-                <!-- ===== MÁS TESTIMONIOS ===== -->
+                <!-- Testimonios adicionales -->
                 <div class="testimonials-carousel">
+                    <!-- Testimonio 2: Carlos López -->
                     <div class="testimonial-card">
-                        <span class="stars">⭐⭐⭐⭐⭐</span>
-                        <span class="text">"200 Megas es increíble. Trabajo desde casa sin interrupciones."</span>
-                        <span class="author">Carlos López - Querétaro</span>
+                        <img src="https://i.ibb.co/fz9GmwBK/carlos-lopez.jpg" alt="Carlos López" class="avatar" loading="lazy">
+                        <div class="content">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="text">"200 Megas es increíble. Trabajo desde casa sin interrupciones."</span>
+                            <span class="author">Carlos López - Querétaro</span>
+                        </div>
                     </div>
+
+                    <!-- Testimonio 3: Ana García -->
                     <div class="testimonial-card">
-                        <span class="stars">⭐⭐⭐⭐⭐</span>
-                        <span class="text">"Instalación el mismo día, sin esperas. Muy profesionales."</span>
-                        <span class="author">Ana García - Corregidora</span>
+                        <img src="https://i.ibb.co/tTtyXJ6R/ana-garcia.jpg" alt="Ana García" class="avatar" loading="lazy">
+                        <div class="content">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="text">"Instalación el mismo día, sin esperas. Muy profesionales."</span>
+                            <span class="author">Ana García - Corregidora</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1074,11 +1116,10 @@
             const img = document.getElementById('modalImage');
             img.src = src;
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Evita scroll
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal(event) {
-            // Si el clic es en el overlay o en la X, cerramos
             const modal = document.getElementById('modalOverlay');
             const isOverlay = event.target === modal;
             const isCloseBtn = event.target.classList.contains('close-btn');
@@ -1086,8 +1127,6 @@
             if (isOverlay || isCloseBtn) {
                 modal.classList.remove('active');
                 document.body.style.overflow = '';
-                // Opcional: limpiar src para ahorrar memoria
-                // document.getElementById('modalImage').src = '';
             }
         }
 
