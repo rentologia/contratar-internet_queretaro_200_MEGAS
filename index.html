@@ -1,198 +1,990 @@
-<!-- SECCIÓN PRINCIPAL DE OFERTA --><div class="offer-card"><div class="offer-badge">
-🔥 PAQUETE MÁS CONTRATADO EN QUERÉTARO
-</div><h2>
-🚀 Triple Pack Conecta Total
-</h2><div class="main-price"><div class="price-label">
-TODO INCLUIDO POR SOLO
-</div><div class="price">
-$500
-<span>/mes</span>
-</div></div><div class="package-items"><div class="item">
-🌐 <strong>200 Megas</strong> de Internet por Fibra Óptica
-</div><div class="item">
-📺 <strong>170 Canales</strong> en TV Xview
-</div><div class="item">
-📞 <strong>Llamadas Ilimitadas</strong>
-</div><div class="item">
-🎵 <strong>4 Aplicaciones de Amazon</strong> incluidas
-</div><div class="item">
-🚚 <strong>Instalación sin costo</strong>
-</div><div class="item">
-💰 Contrata con solo <strong>$100 de adelanto</strong>
-</div></div></div><!-- HBO MAX COMO UPSELL --><div class="upsell-card"><div class="upsell-title">
-🎬 ¿Quieres más entretenimiento?
-</div><div class="upsell-subtitle">
-Agrega HBO Max a tu paquete
-</div><div class="upsell-price">
-+$80 al mes
-</div><div class="upsell-benefits">✔ Series exclusivas
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>200 Megas + 170 Canales + HBO MAX 6 Meses - Megacable Querétaro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET Y BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-✔ Estrenos de cine
+        html {
+            scroll-behavior: smooth;
+        }
 
-✔ Películas en HD
+        body {
+            background: #0a1628;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+            padding: 8px;
+        }
 
-✔ Contenido para toda la familia
+        .landing-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            min-height: 100vh;
+            border-radius: 20px;
+            box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
 
-</div></div><!-- BENEFICIOS --><div class="trust-section"><div class="trust-item">
-✅ Atención por WhatsApp
-</div><div class="trust-item">
-✅ Verificación de cobertura inmediata
-</div><div class="trust-item">
-✅ Contratación rápida
-</div><div class="trust-item">
-✅ Instalación programada
-</div></div><!-- CTA --><a
-href="https://wa.me/524464044521?text=Hola,%20quiero%20información%20del%20Triple%20Pack%20de%20$500."
-class="cta-whatsapp">
+        /* ===== BARRA DE URGENCIA ===== */
+        .urgency-bar {
+            background: linear-gradient(90deg, #ff6b35 0%, #ff4500 100%);
+            color: white;
+            text-align: center;
+            padding: 14px 12px;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+            animation: pulseUrgency 2s infinite;
+            border-bottom: 3px solid #e63200;
+            box-shadow: 0px 4px 20px rgba(255, 69, 0, 0.3);
+        }
 
-🟢 VERIFICAR COBERTURA AHORA
+        @keyframes pulseUrgency {
+            0%, 100% { 
+                opacity: 1;
+                background: linear-gradient(90deg, #ff6b35 0%, #ff4500 100%);
+            }
+            50% { 
+                opacity: 0.92;
+                background: linear-gradient(90deg, #ff7a52 0%, #ff5a1f 100%);
+            }
+        }
 
-</a><p class="cta-note">
-⚡ Atención personalizada por WhatsApp
-</p><!-- TESTIMONIO --><div class="testimonial">⭐⭐⭐⭐⭐
+        .urgency-icon {
+            display: inline-block;
+            margin-right: 6px;
+            animation: spin 3s linear infinite;
+        }
 
-<p>
-"Me acababa de mudar y me ayudaron a contratar muy rápido."
-</p><strong>
-Cliente de Querétaro
-</strong></div><style>
+        @keyframes spin {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(10deg); }
+        }
 
-.offer-card{
-background:#fff;
-padding:25px;
-border-radius:25px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-margin-bottom:20px;
-}
+        /* ===== HERO ===== */
+        .hero-section {
+            background: linear-gradient(135deg, #003d99 0%, #002966 50%, #001d4d 100%);
+            color: white;
+            padding: 45px 24px 30px 24px;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            position: relative;
+            overflow: hidden;
+        }
 
-.offer-badge{
-background:#ff6b35;
-color:#fff;
-display:inline-block;
-padding:8px 14px;
-border-radius:50px;
-font-size:12px;
-font-weight:700;
-margin-bottom:15px;
-}
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -60%;
+            right: -40%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 180, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
 
-.offer-card h2{
-font-size:28px;
-color:#003399;
-margin-bottom:15px;
-font-weight:800;
-}
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -30%;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(255, 204, 0, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
 
-.main-price{
-text-align:center;
-margin-bottom:20px;
-}
+        .hero-badge {
+            background: rgba(0, 210, 255, 0.25);
+            color: #66d9ff;
+            padding: 8px 22px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 800;
+            display: inline-block;
+            margin-bottom: 16px;
+            border: 1.5px solid rgba(0, 210, 255, 0.4);
+            backdrop-filter: blur(10px);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-.price-label{
-font-size:13px;
-color:#666;
-margin-bottom:5px;
-}
+        .title {
+            font-size: 34px;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 14px;
+            letter-spacing: -0.8px;
+            position: relative;
+            z-index: 2;
+        }
 
-.price{
-font-size:52px;
-font-weight:900;
-color:#003399;
-}
+        .title .highlight {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.1em;
+            animation: gradientShift 3s ease infinite;
+        }
 
-.price span{
-font-size:18px;
-font-weight:500;
-}
+        @keyframes gradientShift {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.15); }
+        }
 
-.package-items{
-display:flex;
-flex-direction:column;
-gap:12px;
-}
+        .subtitle {
+            font-size: 14px;
+            color: #b8d4f0;
+            line-height: 1.65;
+            font-weight: 400;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 4px;
+        }
 
-.item{
-padding:12px;
-background:#f7f9fc;
-border-radius:12px;
-font-size:15px;
-}
+        .subtitle strong {
+            color: #ffd700;
+            font-weight: 800;
+            display: inline-block;
+            padding: 0 6px;
+        }
 
-.upsell-card{
-background:linear-gradient(135deg,#111,#2d2d2d);
-color:white;
-padding:25px;
-border-radius:25px;
-margin-bottom:20px;
-text-align:center;
-}
+        /* ===== BANNER DEL COMERCIAL (IMAGEN RECORTADA) ===== */
+        .commercial-banner {
+            background: #f0f5ff;
+            padding: 10px 20px;
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
 
-.upsell-title{
-font-size:20px;
-font-weight:800;
-margin-bottom:8px;
-}
+        .commercial-banner img {
+            max-height: 55px;
+            width: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid #b8d4f0;
+        }
 
-.upsell-subtitle{
-font-size:14px;
-opacity:.9;
-}
+        .commercial-banner span {
+            font-size: 12px;
+            font-weight: 700;
+            color: #003d99;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-.upsell-price{
-font-size:42px;
-font-weight:900;
-margin:15px 0;
-color:#b388ff;
-}
+        /* ===== CTAs SUPERIORES ===== */
+        .cta-top-container {
+            padding: 18px 24px 12px 24px;
+            background: linear-gradient(135deg, #f0f5ff 0%, #e6f0ff 100%);
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+        }
 
-.upsell-benefits{
-line-height:2;
-font-size:14px;
-}
+        .cta-top-container .label {
+            text-align: center;
+            font-size: 11px;
+            font-weight: 800;
+            color: #003d99;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-.trust-section{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-margin-bottom:25px;
-}
+        .cta-top-whatsapp {
+            background: linear-gradient(145deg, #25d366, #1da851);
+            color: white;
+            text-decoration: none;
+            padding: 17px 20px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 15px;
+            text-align: center;
+            display: block;
+            box-shadow: 0px 10px 35px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            animation: pulseWave 2.2s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
 
-.trust-item{
-background:#f0f5ff;
-padding:12px;
-border-radius:12px;
-font-size:13px;
-text-align:center;
-font-weight:600;
-}
+        .cta-top-whatsapp:hover {
+            transform: translateY(-4px) scale(1.02);
+            background: linear-gradient(145deg, #20b859, #17933b);
+            box-shadow: 0px 15px 45px rgba(37, 211, 102, 0.5);
+        }
 
-.cta-whatsapp{
-display:block;
-background:#25D366;
-color:white;
-text-decoration:none;
-padding:20px;
-border-radius:60px;
-text-align:center;
-font-size:18px;
-font-weight:800;
-box-shadow:0 8px 25px rgba(37,211,102,.35);
-}
+        .cta-top-whatsapp:active {
+            transform: translateY(-1px);
+        }
 
-.cta-note{
-text-align:center;
-margin-top:10px;
-color:#666;
-font-size:13px;
-}
+        .cta-top-whatsapp .sub {
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0.9;
+            display: block;
+            margin-top: 2px;
+        }
 
-.testimonial{
-margin-top:25px;
-background:#fff8e1;
-padding:20px;
-border-radius:20px;
-text-align:center;
-font-size:14px;
-}
+        .cta-top-presencial {
+            background: #ffffff;
+            color: #003d99;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 13px;
+            text-align: center;
+            display: block;
+            border: 2.5px solid #003d99;
+            transition: all 0.3s ease;
+        }
 
-</style>
+        .cta-top-presencial:hover {
+            background: #003d99;
+            color: white;
+            box-shadow: 0px 10px 30px rgba(0, 61, 153, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @keyframes pulseWave {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 10px 35px rgba(37, 211, 102, 0.4);
+            }
+            50% { 
+                transform: scale(1.01);
+                box-shadow: 0 10px 35px rgba(37, 211, 102, 0.6);
+            }
+        }
+
+        /* ===== CONTENIDO PRINCIPAL ===== */
+        .main-content {
+            padding: 22px 24px 30px 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            background: #f8fafc;
+        }
+
+        /* ===== TARJETA TRIPLE PACK ===== */
+        .decision-card {
+            background: #ffffff;
+            border: 2.5px solid #003d99;
+            border-radius: 32px;
+            padding: 28px 22px 22px 22px;
+            width: 100%;
+            margin-bottom: 22px;
+            position: relative;
+            box-shadow: 0px 25px 50px rgba(0, 61, 153, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .decision-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 35px 70px rgba(0, 61, 153, 0.22);
+            border-color: #0052a3;
+        }
+
+        .pop-badge {
+            background: linear-gradient(135deg, #ff6b35, #ff4500);
+            color: white;
+            font-size: 11px;
+            font-weight: 900;
+            padding: 10px 24px;
+            border-radius: 50px;
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0px 8px 25px rgba(255, 69, 0, 0.45);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            white-space: nowrap;
+            animation: popBounce 2.5s ease-in-out infinite;
+        }
+
+        @keyframes popBounce {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.05); }
+        }
+
+        .decision-card h2 {
+            font-size: 26px;
+            color: #003d99;
+            font-weight: 900;
+            text-align: center;
+            margin-top: 14px;
+            letter-spacing: -0.5px;
+        }
+
+        /* ===== BADGE DE VENTAJA ===== */
+        .advantage-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #2ed573, #26a65b);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 800;
+            margin: 12px auto 6px auto;
+            box-shadow: 0px 6px 20px rgba(46, 213, 115, 0.4);
+            animation: pulseAdvantage 2.5s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes pulseAdvantage {
+            0%, 100% { transform: scale(1); box-shadow: 0px 6px 20px rgba(46, 213, 115, 0.4); }
+            50% { transform: scale(1.04); box-shadow: 0px 8px 28px rgba(46, 213, 115, 0.6); }
+        }
+
+        .advantage-badge .icon {
+            font-size: 20px;
+        }
+
+        /* ===== PRECIO ===== */
+        .price-tag {
+            text-align: center;
+            margin: 16px 0 10px 0;
+            background: linear-gradient(145deg, #e6f0ff, #f0f5ff);
+            padding: 16px 0;
+            border-radius: 20px;
+            border: 2px solid #b8d4f0;
+        }
+
+        .price-sub {
+            font-size: 12px;
+            color: #334155;
+            display: block;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .price-main {
+            color: #ff4500;
+            font-size: 42px;
+            font-weight: 900;
+            margin-top: 4px;
+        }
+
+        .price-main span {
+            font-size: 18px;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .price-note {
+            font-size: 13px;
+            color: #2ed573;
+            font-weight: 800;
+            display: block;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .price-note small {
+            font-weight: 500;
+            color: #475569;
+            text-transform: none;
+        }
+
+        .price-real {
+            text-align: center;
+            margin: 8px 0 12px 0;
+            background: linear-gradient(145deg, #fff9e6, #fffaed);
+            padding: 10px;
+            border-radius: 16px;
+            border: 2px dashed #ffcc00;
+        }
+
+        .price-real .label {
+            font-size: 12px;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        .price-real .amount {
+            font-size: 24px;
+            font-weight: 900;
+            color: #003d99;
+            display: block;
+        }
+
+        .price-real .amount small {
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+        /* ===== HBO BONUS (SOLO LOGO) ===== */
+        .hbo-bonus {
+            background: linear-gradient(145deg, #0a0a0a, #1a1a2e);
+            border-radius: 20px;
+            padding: 20px 18px;
+            margin: 14px 0 18px 0;
+            text-align: center;
+            box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.25);
+            border: 2px solid rgba(236, 72, 153, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hbo-bonus::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hbo-bonus .hbo-logo {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 12px;
+            background: white;
+            padding: 8px 16px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+        }
+
+        .hbo-bonus .text {
+            color: white;
+            font-size: 14px;
+            font-weight: 800;
+            margin-top: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hbo-bonus .text .duration {
+            display: inline-block;
+            background: linear-gradient(135deg, #ec4899, #d91f8b);
+            color: white;
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 11px;
+            margin-left: 8px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0px 4px 15px rgba(236, 72, 153, 0.4);
+        }
+
+        .hbo-bonus .text small {
+            font-weight: 500;
+            color: #cbd5e1;
+            display: block;
+            font-size: 12px;
+            margin-top: 6px;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+            margin: 14px 0;
+        }
+
+        /* ===== BENEFICIOS ===== */
+        .neuro-benefits {
+            list-style: none;
+        }
+
+        .neuro-benefits li {
+            font-size: 13.5px;
+            margin-bottom: 13px;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.5;
+            transition: all 0.3s ease;
+        }
+
+        .neuro-benefits li:hover {
+            color: #003d99;
+            padding-left: 4px;
+        }
+
+        .neuro-benefits li strong {
+            color: #003d99;
+            font-weight: 800;
+        }
+
+        .neuro-benefits li .highlight-green {
+            background: linear-gradient(135deg, #d4edda, #c3e9ca);
+            padding: 2px 10px;
+            border-radius: 6px;
+            font-weight: 800;
+            color: #155724;
+        }
+
+        .neuro-benefits li .highlight-blue {
+            background: linear-gradient(135deg, #e6f0ff, #d0e2ff);
+            padding: 2px 10px;
+            border-radius: 6px;
+            font-weight: 800;
+            color: #003d99;
+        }
+
+        .neuro-benefits li .highlight-orange {
+            background: linear-gradient(135deg, #ffe6cc, #ffd9b3);
+            padding: 2px 10px;
+            border-radius: 6px;
+            font-weight: 800;
+            color: #e67e22;
+        }
+
+        .icon-check {
+            color: #2ed573;
+            font-weight: 900;
+            margin-right: 12px;
+            font-size: 19px;
+            margin-top: -1px;
+            flex-shrink: 0;
+        }
+
+        /* ===== PRUEBA SOCIAL ===== */
+        .testimonial-mini {
+            background: linear-gradient(145deg, #e6f0ff, #f0f5ff);
+            padding: 13px 16px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 12px;
+            color: #334155;
+            margin: 14px 0 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: 2px solid #b8d4f0;
+            flex-wrap: wrap;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-mini:hover {
+            background: linear-gradient(145deg, #d0e2ff, #e6f0ff);
+            border-color: #003d99;
+            box-shadow: 0px 6px 20px rgba(0, 61, 153, 0.15);
+        }
+
+        .testimonial-mini .stars {
+            color: #ffcc00;
+            font-weight: 900;
+            font-size: 13px;
+        }
+
+        .testimonial-mini .name {
+            font-weight: 800;
+            color: #003d99;
+        }
+
+        /* ===== CTAs INFERIORES ===== */
+        .cta-bottom-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .cta-bottom-whatsapp {
+            background: linear-gradient(145deg, #25d366, #1da851);
+            color: white;
+            text-decoration: none;
+            padding: 18px 20px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 15px;
+            text-align: center;
+            display: block;
+            box-shadow: 0px 10px 35px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            animation: pulseWave 2.2s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-bottom-whatsapp:hover {
+            transform: translateY(-4px) scale(1.02);
+            background: linear-gradient(145deg, #20b859, #17933b);
+            box-shadow: 0px 15px 45px rgba(37, 211, 102, 0.5);
+        }
+
+        .cta-bottom-whatsapp:active {
+            transform: translateY(-1px);
+        }
+
+        .cta-bottom-whatsapp .sub {
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0.9;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .cta-bottom-presencial {
+            background: #ffffff;
+            color: #003d99;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 13px;
+            text-align: center;
+            display: block;
+            border: 2.5px solid #003d99;
+            transition: all 0.3s ease;
+        }
+
+        .cta-bottom-presencial:hover {
+            background: #003d99;
+            color: white;
+            box-shadow: 0px 10px 30px rgba(0, 61, 153, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* ===== MÚLTIPLES TESTIMONIOS ===== */
+        .testimonials-carousel {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 18px 0 18px 0;
+        }
+
+        .testimonial-card {
+            background: linear-gradient(145deg, #f0f5ff, #e6f0ff);
+            padding: 12px 14px;
+            border-radius: 16px;
+            font-size: 12px;
+            color: #334155;
+            border: 1.5px solid #b8d4f0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            background: linear-gradient(145deg, #d0e2ff, #e6f0ff);
+            border-color: #003d99;
+            box-shadow: 0px 6px 16px rgba(0, 61, 153, 0.12);
+        }
+
+        .testimonial-card .stars {
+            color: #ffcc00;
+            font-weight: 900;
+            font-size: 12px;
+        }
+
+        .testimonial-card .text {
+            font-weight: 600;
+            line-height: 1.4;
+            color: #1f2937;
+        }
+
+        .testimonial-card .author {
+            font-weight: 800;
+            color: #003d99;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        /* ===== FOOTER SEGURIDAD ===== */
+        .footer-secure {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 20px;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            border-top: 2px solid #e2e8f0;
+            padding-top: 18px;
+        }
+
+        .footer-secure span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 4px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .footer-secure .icon {
+            font-size: 20px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 420px) {
+            .title { 
+                font-size: 28px; 
+                line-height: 1.2;
+            }
+            
+            .subtitle {
+                font-size: 13px;
+            }
+
+            .price-main { 
+                font-size: 36px; 
+            }
+
+            .decision-card {
+                padding: 24px 18px 18px 18px;
+            }
+
+            .footer-secure {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .commercial-banner img {
+                max-height: 40px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .landing-container {
+                border-radius: 0;
+            }
+
+            .title { 
+                font-size: 24px;
+            }
+
+            .price-main {
+                font-size: 30px;
+            }
+
+            .urgency-bar {
+                font-size: 10px;
+                padding: 10px 8px;
+            }
+        }
+
+        @media (min-width: 520px) {
+            .landing-container {
+                border-radius: 30px;
+            }
+        }
+
+        /* ===== REDUCIR MOVIMIENTO ===== */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ===== DARK MODE LIGHT SUPPORT ===== */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #0a0a0a;
+            }
+
+            .landing-container {
+                box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing-container">
+
+        <!-- ===== BARRA DE URGENCIA ===== -->
+        <div class="urgency-bar">
+            <span class="urgency-icon">⚡</span>
+            SOLO 2 INSTALACIONES DISPONIBLES EN CORREGIDORA HOY
+        </div>
+
+        <!-- ===== HERO ===== -->
+        <section class="hero-section">
+            <span class="hero-badge">✔️ Contratación 100% Digital</span>
+            <h1 class="title">
+                Estrenas Casa,<br><span class="highlight">Nosotros te Conectamos</span>
+            </h1>
+            <p class="subtitle">
+                <strong>200 Megas + 170 canales + 4 apps Amazon</strong><br>
+                con <strong>HBO MAX 6 meses en BONUS</strong>.<br>
+                Instalación GRATIS con solo <strong>$100</strong> de adelanto.
+            </p>
+        </section>
+
+        <!-- ===== BANNER DEL COMERCIAL (IMAGEN RECORTADA) ===== -->
+        <div class="commercial-banner">
+            <img src="https://i.ibb.co/N6TQ0qZW/comercial.jpg" alt="Comercial Megacable" loading="lazy">
+            <span>📺 Como lo ves en TV</span>
+        </div>
+
+        <!-- ===== CTAs SUPERIORES ===== -->
+        <div class="cta-top-container">
+            <div class="label">⚡ Contrata ahora en 2 minutos</div>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/524464044621?text=Hola%2C%20quiero%20contratar%20por%20WhatsApp%20el%20Triple%20Pack%20con%20HBO%20MAX%206%20meses%20en%20Quer%C3%A9taro." 
+               class="cta-top-whatsapp" target="_blank" rel="noopener noreferrer">
+                💬 Contratar por WhatsApp
+                <span class="sub">⏱️ Atención inmediata (menos de 2 min)</span>
+            </a>
+
+            <!-- Presencial -->
+            <a href="https://wa.me/524464044621?text=Hola%2C%20prefiero%20que%20vengan%20a%20mi%20domicilio%20a%20contratar%20el%20Triple%20Pack%20con%20HBO%20MAX%206%20meses%20en%20Quer%C3%A9taro." 
+               class="cta-top-presencial" target="_blank" rel="noopener noreferrer">
+                🏠 Prefiero que vengan a mi casa
+            </a>
+        </div>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <main class="main-content">
+
+            <!-- ===== TARJETA TRIPLE PACK ===== -->
+            <div class="decision-card">
+                <span class="pop-badge">🔥 MÁS SOLICITADO</span>
+                <h2>🚀 Triple Pack Conecta Total</h2>
+
+                <!-- VENTAJA: 6 MESES -->
+                <div class="advantage-badge">
+                    <span class="icon">🎯</span> Solo 6 meses (más flexible)
+                </div>
+
+                <!-- PRECIO DE INSTALACIÓN -->
+                <div class="price-tag">
+                    <span class="price-sub">Instalación GRATIS con solo</span>
+                    <span class="price-main">$100 <span>MXN</span></span>
+                    <span class="price-note">✅ <small>Se descuentan en tu primer mes</small></span>
+                </div>
+
+                <!-- PRECIO MENSUAL REAL -->
+                <div class="price-real">
+                    <span class="label">Paquete completo por solo</span>
+                    <span class="amount">$500 <small>MXN/mes</small></span>
+                </div>
+
+                <!-- ===== HBO BONUS CON LOGO OFICIAL ===== -->
+                <div class="hbo-bonus">
+                    <img src="https://i.ibb.co/qYc7PYpL/hbo-logo.png" 
+                         alt="HBO MAX Logo" class="hbo-logo" loading="lazy">
+
+                    <div class="text">
+                        🎁 BONUS: HBO MAX <span class="duration">6 MESES</span>
+                        <small>Series premium, películas en 4K, sin publicidad</small>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- ===== BENEFICIOS NEURO ===== -->
+                <ul class="neuro-benefits">
+                    <li>
+                        <span class="icon-check">✓</span>
+                        <span><strong>200 Megas</strong> — Streaming, gaming y videoconferencias sin lag.</span>
+                    </li>
+                    <li>
+                        <span class="icon-check">✓</span>
+                        <span><strong><span class="highlight-blue">170 canales HD</span></strong> — Películas, deportes y series 24/7.</span>
+                    </li>
+                    <li>
+                        <span class="icon-check">✓</span>
+                        <span><strong><span class="highlight-blue">4 apps de Amazon</span></strong> — Prime Video, Music, Photos, Appstore.</span>
+                    </li>
+                    <li>
+                        <span class="icon-check">✓</span>
+                        <span><strong>Fibra óptica</strong> — Señal estable, incluso con lluvia.</span>
+                    </li>
+                    <li>
+                        <span class="icon-check">✓</span>
+                        <span><strong><span class="highlight-orange">6 MESES</span></strong> — Compromiso flexible. Otros piden 1 año.</span>
+                    </li>
+                    <li>
+                        <span class="icon-check">✓</span>
+                        <span><strong>Sin setup</strong> — Instalación programada a tu conveniencia.</span>
+                    </li>
+                </ul>
+
+                <!-- ===== PRUEBA SOCIAL PRINCIPAL ===== -->
+                <div class="testimonial-mini">
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                    <span>"¡Contratar fue facilísimo! El HBO fue lo mejor 😍"</span>
+                    <span class="name">— Laura M.</span>
+                </div>
+
+                <!-- ===== MÁS TESTIMONIOS ===== -->
+                <div class="testimonials-carousel">
+                    <div class="testimonial-card">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="text">"200 Megas es increíble. Trabajo desde casa sin interrupciones."</span>
+                        <span class="author">Carlos López - Querétaro</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="text">"Instalación el mismo día, sin esperas. Muy profesionales."</span>
+                        <span class="author">Ana García - Corregidora</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== CTAs INFERIORES (REFUERZO) ===== -->
+            <div class="cta-bottom-container">
+
+                <a href="https://wa.me/524464044621?text=Hola%2C%20quiero%20contratar%20por%20WhatsApp%20el%20Triple%20Pack%20con%20HBO%20MAX%206%20meses%20en%20Quer%C3%A9taro." 
+                   class="cta-bottom-whatsapp" target="_blank" rel="noopener noreferrer">
+                    💬 Contratar por WhatsApp
+                    <span class="sub">⏱️ Respuesta en menos de 2 minutos</span>
+                </a>
+
+                <a href="https://wa.me/524464044621?text=Hola%2C%20prefiero%20que%20vengan%20a%20mi%20domicilio%20a%20contratar%20el%20Triple%20Pack%20con%20HBO%20MAX%206%20meses%20en%20Quer%C3%A9taro." 
+                   class="cta-bottom-presencial" target="_blank" rel="noopener noreferrer">
+                    🏠 Agenda visita a tu casa
+                </a>
+
+            </div>
+
+            <!-- ===== FOOTER SEGURIDAD ===== -->
+            <div class="footer-secure">
+                <span><span class="icon">🔒</span> Datos Seguros</span>
+                <span><span class="icon">✅</span> Instalación Garantizada</span>
+                <span><span class="icon">📱</span> Soporte 24/7</span>
+                <span><span class="icon">⚡</span> Sin Sorpresas</span>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
