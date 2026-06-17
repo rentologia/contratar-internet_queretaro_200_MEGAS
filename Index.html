@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrata Internet en Querétaro - Fibra Óptica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .landing-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 450px;
+            min-height: 100vh;
+            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Barra de Urgencia/Escasez (Gatillo Mental) */
+        .urgency-bar {
+            background: #ffcc00;
+            color: #001f66;
+            text-align: center;
+            padding: 8px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Hero: Foco en la solución */
+        .hero-section {
+            background: linear-gradient(180deg, #002d72 0%, #00153b 100%);
+            color: white;
+            padding: 45px 24px 35px 24px;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .hero-badge {
+            background: rgba(0, 210, 255, 0.15);
+            color: #00d2ff;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 15px;
+            border: 1px solid rgba(0, 210, 255, 0.3);
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #cbd5e1;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        /* Cuerpo principal */
+        .main-content {
+            padding: 30px 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            background: #f8fafc;
+        }
+
+        /* Tarjeta de Decisión Fácil (Evita la paradoja de la elección) */
+        .decision-card {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 24px;
+            width: 100%;
+            margin-bottom: 25px;
+            position: relative;
+            box-shadow: 0px 15px 30px rgba(0, 31, 102, 0.05);
+            transition: border-color 0.3s ease;
+        }
+
+        .decision-card:hover {
+            border-color: #002d72;
+        }
+
+        .pop-badge {
+            background: #2ed573;
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 50px;
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0px 4px 12px rgba(46, 213, 115, 0.3);
+        }
+
+        .decision-card h2 {
+            font-size: 24px;
+            color: #002d72;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .price-tag {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .price-sub {
+            font-size: 12px;
+            color: #64748b;
+            display: block;
+        }
+
+        .price-main {
+            color: #0f172a;
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .price-main span {
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 400;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e2e8f0;
+            margin: 15px 0;
+        }
+
+        /* Lista de beneficios orientados al cerebro reptiliano */
+        .neuro-benefits {
+            list-style: none;
+        }
+
+        .neuro-benefits li {
+            font-size: 13.5px;
+            margin-bottom: 12px;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.4;
+        }
+
+        .neuro-benefits li strong {
+            color: #0f172a;
+        }
+
+        .icon-check {
+            color: #2ed573;
+            font-weight: 900;
+            margin-right: 12px;
+            font-size: 16px;
+            margin-top: -1px;
+        }
+
+        /* Botón de Acción Magnético */
+        .cta-magnetic {
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            display: block;
+            box-shadow: 0px 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulseWave 2s infinite;
+        }
+
+        @keyframes pulseWave {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+            }
+            70% {
+                transform: scale(1.03);
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .footer-secure {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing-container">
+        <div class="urgency-bar">
+            ⚡ Instalaciones disponibles hoy en Querétaro y Corregidora
+        </div>
+
+        <section class="hero-section">
+            <span class="hero-badge">Trámite 100% Digital</span>
+            <h1 class="title">¿Estrenando casa? No te quedes sin internet</h1>
+            <p class="subtitle">Conecta tu hogar hoy mismo con Fibra Óptica de alta velocidad. Sin contratos aburridos ni filas eternas.</p>
+        </section>
+
+        <main class="main-content">
+            <div class="decision-card">
+                <span class="pop-badge">MÁS SOLICITADO</span>
+                <h2>Paquete Alta Velocidad</h2>
+                
+                <div class="price-tag">
+                    <span class="price-sub">Suscripción e instalación desde</span>
+                    <span class="price-main">$100 <span>MXN</span></span>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <ul class="neuro-benefits">
+                    <li><span class="icon-check">✓</span> <span><strong>Hasta 200 Megas:</strong> Navega, trabaja y juega en familia al mismo tiempo sin trabas.</span></li>
+                    <li><span class="icon-check">✓</span> <span><strong>Fibra Óptica Directa:</strong> Máxima estabilidad incluso en días lluviosos.</span></li>
+                    <li><span class="icon-check">✓</span> <span><strong>Cero Papeleo:</strong> Validación inmediata solo con tus calles.</span></li>
+                </ul>
+            </div>
+
+            <a href="https://api.whatsapp.com/send?phone=524464044521&text=Hola,%20quiero%20validar%20cobertura%20e%20instalar%20mi%20internet%20en%20Querétaro." class="cta-magnetic" target="_blank">
+                ⚡ Validar Cobertura e Instalar Ya
+            </a>
+            
+            <div class="footer-secure">
+                🔒 Tu solicitud será atendida por un asesor autorizado en tiempo real.
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
